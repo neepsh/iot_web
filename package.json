@@ -1,0 +1,14 @@
+{
+  "name": "xbz_iot",
+  "version": "1.0.0",
+  "dependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-clean": "^2.0.0",
+    "xml2js": "^0.4.15",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "zx-grunt-html": "^0.1.10",
+    "zx-grunt-parser": "^0.1.6"
+  }
+}

@@ -1,0 +1,144 @@
+.nav_apply {
+    margin: 0 auto;
+    background: #fff;
+    padding: 0.3rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_apply > div {
+    width: 4.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.apply div {
+    font-size: 0.24rem;
+    padding-bottom: 0.16rem;
+}
+
+.nav_apply .active {
+    color: #ff7500;
+    border-bottom: 1px solid;
+}
+
+#app {
+    background: #efefef;
+}
+
+/* h5 header*/
+.header_logo {
+    height: 0.56rem;
+    width: 1.9rem;
+    background: url('assets/img/new_logo.png') no-repeat;
+    background-size: 100%;
+    margin-left: 0.3rem;;
+}
+
+#header {
+    height: 1.04rem;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.header_menu {
+    font-size: 0.44rem;
+    color: #fff;
+    text-align: right;
+    padding-right: 0.44rem;
+    flex-grow: 3;
+}
+
+#header .nav_item {
+    border: none;
+    padding: 0;
+}
+
+.nav_item nav {
+    padding: 0 0.4rem;
+    line-height: 0.8rem;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    align-content: center;
+}
+
+.nav_item nav a {
+    text-align: left;
+    flex-grow: 3;
+}
+
+.nav_item i {
+    line-height: 0.8rem;
+    transition: 0.2s;
+    font-size: 0.3rem;
+
+    text-align: right;
+}
+
+.nav_list .nav_item li {
+    padding-left: 0.6rem;
+}
+
+.nav_item ul {
+    height: 0;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.nav_list a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+}
+
+.nav_list {
+    position: fixed;
+    top: 1.04rem;
+    right: -60%;
+    width: 60%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    font-size: 0.4rem;
+    transition: 0.6s;
+}
+
+.nav_list li {
+    padding: 0 0.4rem;
+    line-height: 0.8rem;
+    border-bottom: 1px solid;
+}
+
+/*  h5 content*/
+#content {
+    margin-top: 1.0rem;
+}
+
+
+/*h5 footer*/
+.footer_top {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.footer {
+    background: #737f95;
+    padding: 1vh;
+    font-size: 0.28rem;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+}

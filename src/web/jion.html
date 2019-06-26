@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+@@include("../../template/header_web.html", {"title": "header"})
+
+
+<div class="web_join">
+    <div id="banner">
+        <img :src="msg.banner" alt="">
+    </div>
+    <div id="contents">
+        <div class="content">
+            <nav class="nav">
+                <p>战略目标</p>
+                <span>Strategic goals</span>
+            </nav>
+            <div class="content_item item">
+                <div>
+                    <img :src="msg.item.img1" alt="#">
+                </div>
+                <div>
+                    <img :src="msg.item.img2" alt="#">
+                </div>
+                <div>
+                    <img :src="msg.item.img3" alt="#">
+                </div>
+                <div>
+                    <img :src="msg.item.img4" alt="#">
+                </div>
+            </div>
+
+        </div>
+        <div class="content">
+            <nav class="nav">
+                <p>发展规划</p>
+                <span>The development plan</span>
+            </nav>
+            <div class="content_item plan">
+                <div>
+                    <nav>销售额突破2.2亿</nav>
+                    <div class="plan_info">
+                        <p>2019年销售目标：400万</p>
+                        <p>2020年销售目标：600万</p>
+                        <p>2021-2023年销售目标：1200万</p>
+                    </div>
+                </div>
+                <div>
+                    <nav>加盟商超过500家</nav>
+                    <div class="plan_info">
+                        <p>加盟方式采取购买和租赁相结合，降低使用门槛，帮助加盟商实现盈利。</p>
+                        <p>总部供应机器、原材料及耗材，提供数据管理系统，后期收取年服务费</p>
+                    </div>
+                </div>
+                <div>
+                    <nav>产品销售覆盖5个省</nav>
+                    <div class="plan_info">
+                        <p>2019-2020年，打入并占领南京市场，形成口碑；</p>
+                        <p>2021-2023年，逐步向其他一二线城市渗透。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <nav class="nav">
+                <p>市场拓展计</p>
+                <span>Market expansion plan</span>
+            </nav>
+            <div class="content_item market">
+                <div class="market_left">
+                    <div>
+                        <p class="p_active">校园市场</p>
+                    </div>
+                    <div>
+                        <p>企业市场</p>
+                    </div>
+                    <div>
+                        <p>CBD市场</p>
+                    </div>
+                    <div>
+                        <p>政府市场</p>
+                    </div>
+                </div>
+                <div class="market_right">
+                    <div>
+                        <div class="market_list"><p>利用自有社会资源，以南京理工大学、南京大学等大学校园为第一批10台 “阿橙果啦”自助果粒橙机投放点，初步试水，观察市场反应。</p></div>
+                        <div class="market_list"><p>与大型集团寻求合作，在其员工食堂及其他休闲区投放机器，后期可开发 集团员工卡直接在“阿橙果啦”机器上刷卡使用功能</p></div>
+                        <div class="market_list"><p>人流量大、用户消费能力强、消费需求高的商业CBD市场，入驻成本较高， 作为后续开拓市场来计划</p></div>
+                        <div class="market_list"><p>政府市场的合作要求相对严格，计划利用管委会支持资源，从园 区逐步向政府部门深入，探索合作可能，如参与赞助政府会议等</p></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include("../../template/footer_web.html", {"title": "footer"})
+
+</body>
+</html>

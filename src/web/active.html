@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #banner img {
+            width: 100%;
+            margin-top: -25px;
+        }
+
+        #content {
+            width: 1200px;
+            padding-top: 55px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+        }
+
+        .nav {
+            text-align: center;
+            position: relative;
+        }
+
+        .nav p {
+            font-size: 24px;
+            padding: 0 200px 22px 200px;
+            width: 180px;
+            margin: 0 auto;
+            border-bottom: 2px solid #ff7500;
+        }
+
+        .nav span {
+            display: inline-block;
+            font-size: 18px;
+            color: #656565;
+            position: absolute;
+            bottom: -10px;
+            background: #fff;
+            left: 43%;
+            padding: 0 10px;
+        }
+        .product img{
+            width: 100%;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+@@include("../../template/header_web.html", {"title": "header"})
+
+
+<div class="web_join">
+    <div id="banner">
+        <img :src="msg.banner" alt="">
+    </div>
+    <div id="content">
+        <div class="content">
+            <nav class="nav">
+                <p>案例活动</p>
+                <span>Case activity</span>
+            </nav>
+            <div class="product">
+                <!-- <div class="item">
+                     <img :src="msg.bg_product1" alt="">
+                     <div class="info">
+                         <div class="price">会员价： <span>6.88万</span></div>
+                         <p>加盟模式: 加盟费20万（5台起）每台押金6.88万</p>
+                         <p>服务条款：软件后台收据服务支持</p>
+                     </div>
+                 </div>
+                 <div class="item">
+                     <img :src="msg.bg_product2" alt="">
+                     <div class="info">
+                         <div class="price">会员价： <span>6.88万</span></div>
+                         <p>加盟模式: 加盟费20万（5台起）每台押金6.88万</p>
+                         <p>服务条款：软件后台收据服务支持</p>
+                     </div>
+
+                 </div>
+                 <div class="item">
+                     <img :src="msg.bg_product3" alt="">
+                     <div class="info">
+                         <div class="price">会员价： <span>6.88万</span></div>
+                         <p>加盟模式: 加盟费20万（5台起）每台押金6.88万</p>
+                         <p>服务条款：软件后台收据服务支持</p>
+                     </div>
+                 </div>
+                 <div class="item">
+                     <img :src="msg.bg_product4" alt="">
+                     <div class="info">
+                         <div class="price">会员价： <span>6.88万</span></div>
+                         <p>加盟模式: 加盟费20万（5台起）每台押金6.88万</p>
+                         <p>服务条款：软件后台收据服务支持</p>
+                     </div>
+                 </div>-->
+                <img :src="msg.bg_product1" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
+@@include("../../template/footer_web.html", {"title": "footer"})
+
+</body>
+</html>

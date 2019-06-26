@@ -1,0 +1,510 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        .img{
+            animation:rotatez 7s;
+            animation-timing-function:linear;
+            animation-iteration-count:infinite;
+        }
+        @keyframes rotatez{
+            0%{transform:rotateZ(0deg);}
+            100%{transform:rotateZ(360deg);}
+        }
+        table td{
+            border:1px solid #fff;
+            text-align:center;
+            font-size:30px;
+            color:#fff;
+        }
+    </style>
+    <title>自己做特效</title>
+</head>
+<body style="background-color:#fff;">
+
+<canvas id="canvas" style="border:0px solid #f00">
+</canvas>
+<div id='crt' style="width:100%; height:150px; border:0px solid #fff; background-color:#099; text-align:center;">
+
+    <table cellspacing="0" style="width:100%;  height:100%; border:1px solid #fff;">
+        <td style="width:25%;">
+            <table id="msclist" class="msclist" style="width:100%; height:100%; background-color:#000;">
+
+            </table>
+        </td>
+        <td style="width:50%;">
+            <div onClick="last()" style="width:30%; cursor:pointer; line-height:130px; background-color:#63F; margin-left:3%; height:100%; float:left;">
+                上一曲
+
+            </div>
+            <div onClick="run()" style="width:30%; cursor:pointer; background-color:#63F; margin-left:2%; height:100%; float:left;">
+                <img id="img" src="../img/product1.png" style=" margin-top:10px; height:120px; width:auto; border-radius:100%;" />
+
+            </div>
+            <div onClick="next()" style="width:30%; cursor:pointer; line-height:130px; background-color:#63F; margin-left:2%; height:100%; float:left;">
+                下一曲
+            </div>
+        </td>
+        <td style="width:25%;">
+            <form oninput="cgcolor()">
+                <table style="width:100%; height:100%; ">
+                    <tr>
+                    </tr>
+                    &lt;!&ndash;<tr>
+
+                     <td id="td1" style="cursor:pointer; font-size:18px; background-color:#09C;">开始<br /><input type="color" id='startc' /></td>
+
+                     <td style="cursor:pointer; font-size:18px; background-color:#09C;">中点<br /><input type="color" id='contentc' /></td>
+                     <td style="cursor:pointer; font-size:18px; background-color:#09C;">末端<br /><input type="color" id='endc' /></td>
+
+                    </tr>&ndash;&gt;
+                </table>
+            </form>
+        </td>
+    </table>
+
+</div>
+<audio id="audio" autoplay></audio>
+
+</body>
+<script type="text/javascript">
+
+    window.AudioContext=window.AudioContext||window.webkitAudioContext||window.mozAudioContext;
+
+    var msc=['neep','miss','flower'];
+    var mscsrc=['11.mp3','22.mp3','11.mp3'];
+    var mscid=0;
+    function playa(id){
+        mscid=id;
+        document.getElementById('audio').src=mscsrc[mscid];
+        run();
+        cgcss();
+    }
+    function next(){
+        if(mscid>(msc.length-2))
+            mscid=0;
+        else
+            mscid++;
+        document.getElementById('audio').src=mscsrc[mscid];
+        run();
+        cgcss();
+    }
+    function last(){
+        if(mscid<1)
+            mscid=msc.length-1;
+        else
+            mscid&#45;&#45;;
+        document.getElementById('audio').src=mscsrc[mscid];
+        run();
+        cgcss();
+    }
+    function cgcss(){
+        document.getElementById("1").style.backgroundColor="#000";
+
+        document.getElementById("2").style.backgroundColor="#000";
+
+        document.getElementById("0").style.backgroundColor="#000";
+        document.getElementById(mscid).style.backgroundColor="#f00";
+    }
+    var cssn=2;
+    var voicec1=["#0f0","#f00","#f0f"];
+    function cgcolor(){
+        voicec1[0]=document.getElementById('startc').value;
+        voicec1[1]=document.getElementById('startc').value;
+        voicec1[2]=document.getElementById('startc').value;
+    }
+    window.onload=function play(){
+
+        var $=function(id){
+            return document.getElementById(id);
+        }
+        var canvas=$('canvas');
+        var audio=$('audio');
+        for(var a=0;a<msc.length;a++){
+            var msclist=$('msclist').innerHTML;
+            $('msclist').innerHTML=msclist+"<tr><td id='"+a+"' onclick='playa(this.id)' style='cursor:pointer;'>"+msc[a]+"</td></tr>";
+        }
+        cgcss();
+
+        audio.src=mscsrc[mscid];
+        var ctr=$('ctr');
+        var ctx=canvas.getContext('2d');
+        var actx=new AudioContext();
+
+        color=ctx.createLinearGradient(canvas.width*.5,0,canvas.width*.5,300);
+        color.addColorStop(0,voicec1[0]);
+        color.addColorStop(.5,voicec1[1]);
+        color.addColorStop(1,voicec1[2]);
+        colort=ctx.createLinearGradient(canvas.width*.5,300,canvas.width*.5,600);
+        colort.addColorStop(0,"rgba(125,225,133,0.7)");
+        colort.addColorStop(.5,"rgba(225,225,0,0.1)");
+        colort.addColorStop(1,"rgba(125,0,133,0)");
+        canvas.width=window.innerWidth;
+        canvas.height=window.innerHeight*.7;
+
+        var analyser=actx.createAnalyser();
+        console.log(analyser)
+        var audioSrc=actx.createMediaElementSource(audio);
+        audioSrc.connect(analyser);
+        analyser.connect(actx.destination);
+        var num=80;
+        function draw(){
+            var voicehigh=new Uint8Array(analyser.frequencyBinCount);
+            analyser.getByteFrequencyData(voicehigh);
+            var step=Math.round(voicehigh.length/num);
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+
+            ctx.beginPath();
+
+            for(var i=1;i<num;i++){
+                var value=voicehigh[step*i];
+                ctx.fillStyle=color;
+                ctx.fillRect(i*10+canvas.width*.5,250,7,-value+1);
+                ctx.fillRect(canvas.width*.5-(i-1)*10,250,7,-value+1);
+                ctx.fill();
+                ctx.fillStyle=colort;
+                ctx.fillRect(i*10+canvas.width*.5,250,7,value+1);
+                ctx.fillRect(canvas.width*.5-(i-1)*10,250,7,value+1);
+
+
+                //ctx.stroke();
+            }
+            requestAnimationFrame(draw);
+        }
+        draw();
+    }
+
+    function run(){
+        var audio=document.getElementById('audio');
+        var imgcss=document.getElementById('img');
+        if(audio.paused)
+            audio.play(),
+                imgcss.className='img';
+        else
+            audio.pause(),
+                imgcss.className='';
+    }
+</script>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        body {
+            font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+            overflow: auto;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+        }
+        .tb-edit .el-input {
+            display: none
+        }
+        .tb-edit .active .el-input {
+            display: block
+        }
+        .tb-edit .active .el-input+span {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+<div id="app">
+    <!--    <template>
+            <el-table :data="tableData" style="width: 100%">
+
+                <el-table-column prop="date" label="日期" width="180"></el-table-column>
+
+                <el-table-column prop="name" label="姓名" width="180"></el-table-column>
+
+                <el-table-column prop="address" label="地址"></el-table-column>
+
+            </el-table>
+        </template>
+       &lt;!&ndash; <table>
+            <tr>
+                <th>POSTAL CODE</th>
+                <td><input type="text" name="postal_code"  /></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>
+                    <select name="city">
+                        <option>ABC</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>District</th>
+                <td><input type="text" name="District" /></td>
+            </tr>
+            <tr>
+                <th>Street</th>
+                <td><input type="text" name="Street" /></td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>
+                    last_name<input type="text" name="last_name"  /><br/>
+                    first_name<input type="text" name="first_name"  />
+                </td>
+            </tr>
+        </table>&ndash;&gt;
+
+
+        &lt;!&ndash;    <elx-editable ref="elxEditable" :data.sync="tableData">&ndash;&gt;
+        &lt;!&ndash;        <elx-editable-column type="selection" width="55"></elx-editable-column>&ndash;&gt;
+        &lt;!&ndash;        <elx-editable-column type="index" width="55"></elx-editable-column>&ndash;&gt;
+        &lt;!&ndash;        <elx-editable-column prop="name" label="只读"></elx-editable-column>&ndash;&gt;
+        &lt;!&ndash;        <elx-editable-column prop="sex" label="下拉" :edit-render="{name: 'ElSelect', options: sexList}"></elx-editable-column>&ndash;&gt;
+        &lt;!&ndash;        <elx-editable-column prop="age" label="数值" :edit-render="{name: 'ElInputNumber'}"></elx-editable-column>&ndash;&gt;
+        &lt;!&ndash;        <elx-editable-column prop="date" label="日期" :edit-render="{name: 'ElDatePicker', props: {type: 'date', format: 'yyyy-MM-dd'}}"></elx-editable-column>&ndash;&gt;
+        &lt;!&ndash;        <elx-editable-column prop="flag" label="开关" :edit-render="{name: 'ElSwitch', type: 'visible'}"></elx-editable-column>&ndash;&gt;
+        &lt;!&ndash;        <elx-editable-column prop="remark" label="文本" :edit-render="{name: 'ElInput'}"></elx-editable-column>&ndash;&gt;
+        &lt;!&ndash;    </elx-editable>&ndash;&gt;
+
+        <el-progress :text-inside="true" :stroke-width="18" :percentage=num></el-progress>
+
+
+        <el-table :data="tableData" class="tb-edit" style="width: 100%">
+            <el-table-column label="日期" width="180">
+                <template scope="scope">
+                    <el-input size="small" v-model="scope.row.date" placeholder="请输入内容" ></el-input> <span>{{scope.row.date}}</span>
+                </template>
+            </el-table-column>
+            <el-table-column label="姓名" width="180">
+                <template scope="scope">
+                    <el-input size="small" v-model="scope.row.name" placeholder="请输入内容"></el-input> <span>{{scope.row.name}}</span>
+                </template>
+            </el-table-column>
+            <el-table-column prop="address" label="地址">
+                <template scope="scope">
+                    <el-input size="small" v-model="scope.row.address" placeholder="请输入内容" ></el-input> <span>{{scope.row.address}}</span>
+                </template>
+            </el-table-column>
+            <el-table-column label="操作">
+                <template scope="scope">
+                    <el-button size="small" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+                    <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">完成</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+
+        <el-select v-model="Data"  filterable :filter-method="PinyinMatch">
+            <el-option v-for="item in commonAddr" :key="item.CodeValue" :lable="item.codeName" :value="item.CodeValue"></el-option>
+        </el-select>
+
+        <el-upload
+                class="upload-demo"
+                action="https://jsonplaceholder.typicode.com/posts/"
+                :on-preview="handlePreview"
+                :on-remove="handleRemove"
+                :before-remove="beforeRemove"
+                multiple
+                :limit="3"
+                :on-exceed="handleExceed"
+                :file-list="fileList">
+            <el-button size="small" type="primary">选择文件</el-button>
+            <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+        </el-upload>
+
+        <el-button @click="up_file">上传</el-button>-->
+
+    <el-tree :data="neeps" show-checkbox :props="defaultProps" @check-change="handleCheckChange"></el-tree>
+    <el-input v-model="neepsh"></el-input>
+
+</div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="../js/main.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+
+
+        data: {
+            neepsh:"",
+            defaultProps: {
+                children: 'children',
+                label: 'label'
+            },
+            neeps: [{
+                label: '一级 1',
+                children: [{
+                    label: '二级 1-1',
+                    children: [{
+                        label: '三级 1-1-1'
+                    }]
+                }]
+            }, {
+                label: '一级 2',
+                children: [{
+                    label: '二级 2-1',
+                    children: [{
+                        label: '三级 2-1-1'
+                    }]
+                }, {
+                    label: '二级 2-2',
+                    children: [{
+                        label: '三级 2-2-1'
+                    }]
+                }]
+            }, {
+                label: '一级 3',
+                children: [{
+                    label: '二级 3-1',
+                    children: [{
+                        label: '三级 3-1-1'
+                    },{
+                        label:"neep"
+                    }]
+                }, {
+                    label: '二级 3-2',
+                    children: [{
+                        label: '三级 3-2-1'
+                    }]
+                }]
+            }],
+            fileList: [],
+            Data:"aa",
+            commonAddr:[{
+                CodeValue:'小明',
+                CodeName:'小明'
+            }],
+            copycommonAddr:[{
+                CodeValue:'小明',
+                CodeName:'小明'
+            }],
+            num:0,
+
+            tableData: [{
+                date: '2016-05-02',
+                name: '王小虎',
+                address: '上海市普陀区金沙江路 1518 弄'
+            }, {
+                date: '2016-05-04',
+                name: '王小虎',
+                address: '上海市普陀区金沙江路 1517 弄'
+            }, {
+                date: '2016-05-01',
+                name: '王小虎',
+                address: '上海市普陀区金沙江路 1519 弄'
+            }, {
+                date: '2016-05-03',
+                name: '王小虎',
+                address: '上海市普陀区金沙江路 1516 弄'
+            }],
+            tableDatas: [{
+                date: 1551322088449,
+                name: '小徐',
+                sex: '1',
+                age: '26',
+                flag: false,
+                remark: '备注'
+            }],
+            sexList: [
+                {
+                    'label': '男',
+                    'value': '1'
+                },
+                {
+                    'label': '女',
+                    'value': '0'
+                }
+            ]
+
+        },
+        methods: {
+            handleCheckChange(data, checked, indeterminate) {
+                var _this=this;
+                this.neeps+=data.label;
+
+                if(data.children){
+                    data.children.forEach(item=>{
+                        _this.neepsh+=item.label;
+                    })
+                }
+            },
+            up_file(){
+                var timer=null,_this=this;
+                timer=setInterval(function () {
+                    _this.num++;
+                    if(_this.num>=100){
+                        clearInterval(timer)
+                    }
+
+                    console.log(_this.num)
+                })
+            },
+            handleRemove(file, fileList) {
+                console.log(file, fileList);
+            },
+            handlePreview(file) {
+                console.log(file);
+            },
+            handleExceed(files, fileList) {
+                this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
+            },
+            beforeRemove(file, fileList) {
+                return this.$confirm(`确定移除 ${ file.name }？`);
+            },
+            handleCurrentChange(row, event, column) {},
+            handleEdit(index, row) {
+
+                var oBox=document.querySelectorAll('.tb-edit .el-table__row')[index];
+                oBox.classList.add('active');
+                console.log(oBox)
+            },
+            handleDelete(index, row) {
+                console.log(this)
+                var oBox=document.getElementsByClassName('el-table__row')[index];
+                oBox.classList.remove('active');
+
+            },
+            PinyinMatch(val){
+                console.log(this.commonAddr)
+                if(val){
+                    var resut=[];
+                    this.copycommonAddr.forEach(i =>{
+                        var m=PinyinMatch.match(i.CodeName,val)
+                        if(m){
+                            resut.push(i)
+                        }
+                    })
+                    this.commonAddr=resut
+                }else{
+                    this.commonAddr=this.copycommonAddr
+                }
+            }
+        },
+        mounted(){
+            console.log(PinyinMatch)
+            var aBox=document.getElementsByClassName('cell');
+
+            console.log(aBox);
+
+            for( var i=0 ; i<aBox.length; i++){
+
+                console.log(i)
+                aBox[i].onclick=function () {
+
+                    console.log(this.contentEditable)
+                }
+            }
+        }
+    })
+</script>
+</html>

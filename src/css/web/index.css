@@ -1,0 +1,347 @@
+/* banner */
+
+.banner_line{
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.banner_line div{
+    height: 10px;
+    width: 20px;
+    border-radius: 5px;
+    background: #fff;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.banner .line_active{
+    width: 40px;
+    background: #ff7500;
+}
+.btn_banner{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.btn_banner:hover i{
+    opacity: 1;
+}
+.btn_banner i:hover{
+    transform: scale(1.4);
+}
+
+.btn_banner i{
+    transition: 0.6s;
+    font-size: 50px;
+    color: #fff;
+    opacity: 0.4;
+    cursor: pointer;
+}
+.btn_right{
+    left: 70%;
+}
+.banner_ref{
+    width: 20000px;
+    display: flex;
+    position: absolute;
+}
+.banner{
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.company_info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding-bottom: 55px;
+    border-bottom: 3px solid #f87704;
+}
+
+.company_img img {
+    width: 430px;
+    height: 430px;
+    transform: scale(1);
+    transition: 0.6s;
+}
+.company_img img:hover{
+    transform: scale(1.1);
+}
+.company_img {
+    margin-left: 66px;
+    overflow: hidden;
+}
+
+.company_p {
+    font-size: 16px;
+    color: #656565;
+    text-indent: 2em;
+    margin-top: 55px;
+    line-height: 30px;
+}
+
+.company_name {
+    width: 270px;
+    height: 50px;
+    border: 2px solid #f88015;
+    text-align: center;
+    position: relative;
+}
+
+.company_name p {
+    font-size: 19px;
+    color: #656565;
+}
+
+.company_name span {
+    font-size: 28px;
+    color: #000;
+    display: inline-block;
+    background: #fff;
+    padding: 0 50px;
+}
+
+.company_p p{
+    width: 700px;
+}
+
+/*企业文化*/
+.culture_name {
+    width: 270px;
+    height: 50px;
+    border: 2px solid #f88015;
+    text-align: center;
+    position: relative;
+}
+
+.culture_name p {
+    font-size: 19px;
+    color: #656565;
+}
+
+.culture_name span {
+    font-size: 28px;
+    color: #000;
+    display: inline-block;
+    background: #fff;
+    padding: 0 50px;
+}
+
+.culture {
+    padding: 50px 0;
+    border-bottom: 3px solid #f87704;
+
+}
+
+.culture_list {
+    margin-top: 100px;
+    background: #fff0d7;
+    margin-bottom: 25px;
+    padding: 35px 200px 60px 200px;
+}
+
+.culture_list nav {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 60px;
+}
+
+.culture_list div {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cul_type img {
+    width: 100%;
+}
+
+/* 产品*/
+.product {
+    margin-top: 30px;
+}
+
+.product_info {
+    width: 281px;
+    line-height: 24px;
+    color: #101010;
+}
+
+.product_list:nth-of-type(2n+1) .product_info {
+    border-top: 3px solid #b5b5b5;
+    border-right: 3px solid #b5b5b5;
+    padding: 25px;
+}
+.product_list>div{
+    overflow: hidden;
+}
+
+.product_list:nth-of-type(2n+1) .product_name:after {
+    content: '';
+    display: block;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    bottom: -7.5px;
+    right: -7.5px;
+}
+
+.product_list:nth-of-type(2n) .product_info {
+    border-left: 3px solid #b5b5b5;
+    border-bottom: 3px solid #b5b5b5;
+    padding: 25px;
+}
+
+.product_list:nth-of-type(2n) .product_name:after {
+    content: '';
+    display: block;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    bottom: -7.5px;
+    left: -7.5px;
+}
+
+.product_list {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.product {
+    padding-bottom: 50px;
+    border-bottom: 3px solid #f87704;
+}
+
+.product_list img {
+    width: 429px;
+    transition: 0.6s;
+    transform: scale(1);
+}
+.product_list img:hover{
+    transform: scale(1.4);
+}
+
+.product_list:nth-of-type(2n) {
+    flex-direction: row-reverse;
+}
+
+.product_name p {
+    padding-bottom: 5px;
+    font-size: 24px;
+    color: #414141;
+}
+
+.product_name span {
+    color: #414141;
+}
+
+.product_name {
+    padding-left: 12px;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #b5b5b5;
+    width: 303px;
+}
+
+/* 公司地址 */
+
+.address_name p {
+    font-size: 19px;
+    color: #656565;
+}
+/*
+
+.address_name span {
+    font-size: 28px;
+    color: #000;
+    display: inline-block;
+    background: #fff;
+    padding: 0 50px;
+}
+
+.address_name {
+    width: 270px;
+    height: 50px;
+    border: 2px solid #f88015;
+    text-align: center;
+    position: relative;
+    margin: 50px auto;
+}
+
+.address_content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.address_info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.address_item{
+    text-align: center;
+    width: 30%;
+    color: #ff7500;
+}
+.address_item i{
+    font-size: 64px;
+}
+.address_item p{
+    font-size: 16px;
+    padding: 20px 0;
+}
+.address_item div{
+    font-size: 18px;
+}
+.address {
+    margin-bottom: 30px;
+}*/
+
+/*公司优势*/
+
+.odds{
+    padding-top: 30px;
+}
+.odds_content{
+    margin: 30px 0 50px;
+    display: flex;
+    height: 351px;
+    background: #fff0d7;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.odds_list{
+    font-size: 24px;
+    color: #000;
+}
+.odds_list i{
+    color: #ff7500;
+    display: inline-block;
+    padding-bottom: 30px;
+    font-size:60px ;
+}

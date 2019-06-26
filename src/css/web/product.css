@@ -1,0 +1,112 @@
+.system div{
+    position: absolute;
+    right: 0;
+    width: 550px;
+    top: 60px;
+    font-size: 18px;
+    line-height: 40px;
+}
+.system p{
+    text-indent: 2em;
+    padding-top: 20px;
+}
+.hand div{
+    position: absolute;
+    left: 0;
+    width: 400px;
+    top: 100px;
+    font-size: 18px;
+    line-height: 40px;
+    padding-left: 30px;
+}
+.hand p{
+    text-indent: 2em;
+    padding-top: 20px;
+}
+.system{
+    height: 480px;
+    background: url("../../assets/img/product_bg_07.jpg");
+    background-size: cover;
+    position: relative;
+}
+.hand{
+    margin-bottom: 30px;
+    position: relative;
+    height: 532px;
+    background: url("../../assets/img/product_bg_09.jpg");
+    background-size: cover;
+}
+.img{
+    height: 508px;
+    background: url("../../assets/img/product_bg_03.jpg");
+    background-size: cover;
+}
+.infos{
+    margin: 30px 0;
+    padding-right:  30px;
+    border-right: 1px solid #d9d9d9;
+    text-indent: 2em;
+    line-height: 30px;
+}
+.info_list>div{}
+.info_info ul{
+    margin-top: 30px;
+}
+.info_info li{
+    line-height:34px ;
+    font-size: 16px;
+    text-indent: 1em;
+}
+.info_list{
+    width: 33%;
+    padding-left: 30px;
+}
+.item_nav{
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+.info_info{
+    flex-grow: 3;
+}
+.info_img img{
+    width:  616px;
+}
+.info>div{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.content_item{
+    margin-top: 30px;
+}
+.content{
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav{
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+.nav p {
+    font-size: 24px;
+    padding: 0 200px 22px 200px;
+    width: 280px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ff7500;
+}
+.nav span {
+    display: inline-block;
+    font-size: 18px;
+    color: #656565;
+    position: relative;
+    bottom: 12px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.banner img{
+    width: 100%;
+    margin-top: -25px;
+}

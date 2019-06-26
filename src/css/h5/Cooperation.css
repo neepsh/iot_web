@@ -1,0 +1,131 @@
+body{
+    background: #efefef;
+}
+.header_logo{
+    height: 0.56rem;
+    width: 1.9rem;
+    background: url("../../img/new_logo .png") no-repeat;
+    background-size: 100%;
+    margin-left:0.3rem; ;
+}
+#header{
+    height: 1.04rem;
+    background: #000;
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.header_menu{
+    font-size: 0.44rem;
+    color: #fff;
+    text-align: right;
+    padding-right: 0.44rem;
+    flex-grow: 3;
+}
+.nav_list{
+    position: fixed;
+    top: 1.04rem;
+    right: -60%;
+    width: 60%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 0.4rem;
+    transition: 0.6s;
+}
+.nav_list li{
+    padding: 0 0.4rem;
+    line-height: 0.8rem;
+    border-bottom: 1px solid;
+}
+
+#banner img{
+    width: 100%;
+}
+#banner{
+    margin-bottom: 0.3rem;
+}
+.nav{
+    text-align: center;
+}
+.nav_name{
+    font-size: 0.28rem;
+    display: inline-block;
+    padding: 0 0.41rem 0.15rem 0.41rem;
+    width: 1.28rem;
+    border-bottom: 0.02rem solid #8da3ae;
+    position: relative;
+}
+.nav_name:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.02rem;
+    width: 1.28rem;
+    height: 0.04rem;
+    background: #ff7500;
+    left: 0.41rem;
+    z-index: 1;
+}
+.nav_info{
+    font-size: 0.24rem;
+    margin-top: 0.16rem;
+    margin-bottom: 0.2rem;
+}
+.item{
+    background: #fff;
+    margin-bottom: 0.3rem;
+    padding: 0.3rem;
+    font-size: 0.24rem;
+}
+.item_img img{
+    width: 80%;
+}
+.item_img{
+    text-align: center;
+}
+.item_flex{
+    display: flex;
+    justify-content: space-around;
+}
+.item_flex img{
+    width:2.9rem; ;
+}
+.item_flex>div:nth-of-type(2){
+    flex-grow: 2;
+    margin-left: 0.3rem;
+    font-size: 0.24rem;
+}
+.item_flex p{
+    line-height: 0.4rem;
+}
+.server{
+    font-size: 0.24rem;
+    display: flex;
+    justify-content: space-around;
+}
+.server img{
+    width: 2.18rem;
+}
+.server p{
+    line-height: 0.4rem;
+}
+
+
+
+.footer_top{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #fff;
+}
+.footer{
+    background: #737f95;
+    padding: 1vh;
+    font-size: 0.28rem;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+}

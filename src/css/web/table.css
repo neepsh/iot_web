@@ -1,0 +1,136 @@
+.btn button{
+    width: 120px;
+    height: 40px;
+    background: #ff7500;
+    color: #fff;
+    border: none;
+}
+.btn{
+    margin-top: 30px;
+    text-align: center;
+}
+.icon{
+    width: 40px;
+    text-align: center;
+}
+.from>div{
+    display: flex;
+    justify-content: space-around;
+}
+.form_info{
+    flex-grow: 3;
+}
+.from,.check{
+    flex-grow: 3;
+    margin-left: 30px;
+}
+.text textarea{
+    resize: none;
+    width: 880px;
+    height: 138px;
+}
+.text{
+    flex-grow: 3;
+}
+.text_name{
+    width: 150px;
+    color: #ff7500;
+}
+.list_radio{
+    flex-grow: 3;
+    margin-left: 30px;
+}
+.radio{
+    color: #ff7500;
+}
+.list .input_name{
+    width: 80px;
+    display: inline-block;
+    text-align: left;
+}
+.item:nth-of-type(3) .list{
+    padding: 12px 0 ;
+}
+
+.list.last{
+    flex-grow: 3;
+    display: block;
+}
+.list>input {
+    width: 384px;
+    height: 43px;
+    border: 1px solid #d9d9d9;
+}
+.select_right{
+    margin-left: 30px;
+}
+.list>span{
+    width: 100px;
+    color: #ff7500;
+    text-align: right;
+}
+.list_select{
+    flex-grow: 3;
+}
+.list>p{
+    color: #ff7500;
+}
+.list select{
+    width: 183px;
+    height: 43px;
+    margin-left: 18px;
+}
+.list{
+    line-height: 43px;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+.item{
+    flex-wrap: wrap;
+    text-align: left;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid #d9d9d9;
+}
+.list{
+    width: 50%;
+    text-align: left;
+}
+.name{
+    font-size: 18px;
+    color: #ff7500;
+}
+.name button{
+    border: none;
+    width: 114px;
+    height: 40px;
+    background: #ff7500;
+    color: #fff;
+    margin-left: 12px;
+}
+.content{
+    width: 1200px;
+    margin: 0 auto;
+    background: url("../../assets/img/table_bg.png") no-repeat ;
+    background-size: 382px 2232px;
+    padding-bottom: 30px;
+}
+#table {
+    background: #fff;
+    width: 1073px;
+    margin:  0  auto;
+    padding: 35px 30px;
+    box-shadow: 0 0 46px 0 #0a0a0a38;
+    margin-bottom: 50px;
+}
+.nav{
+    text-align: center;
+    color: #ff7500;
+    font-size: 35px;
+    line-height: 150px;
+    margin-top: 20px;
+}

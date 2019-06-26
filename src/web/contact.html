@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #banner img {
+            width: 100%;
+        }
+        .address_name{
+            margin-top: 30px;
+            font-size:30px ;
+            padding-bottom: 30px;
+        }
+        .address li{
+            line-height: 36px;
+            font-size: 18px;
+        }
+        #content {
+            width: 1200px;
+            padding-top: 55px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+        }
+
+        .nav {
+            text-align: center;
+            position: relative;
+        }
+
+        .nav p {
+            font-size: 24px;
+            padding: 0 200px 22px 200px;
+            width: 180px;
+            margin: 0 auto;
+            border-bottom: 2px solid #ff7500;
+        }
+        .nav span {
+            display: inline-block;
+            font-size: 18px;
+            color: #656565;
+            position: relative;
+            bottom: 12px;
+            background: #fff;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .map{
+            height: 5rem;
+            margin-top: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+@@include("../../template/header_web.html", {"title": "header"})
+
+
+<div class="web_contact">
+
+    <div id="banner">
+        <img :src="banner" alt="*">
+    </div>
+    <div id="content">
+
+
+        <div class="item">
+            <nav class="nav">
+                <p>联系我们</p>
+                <span>Cantact Us</span>
+            </nav>
+            <div class="address">
+                <div class="address_name">联系方式</div>
+                <ul>
+                    <li>公司电话：400-828-8251</li>
+                    <li>公司地址：江苏省南京市江宁区麒麟科创园华清园5栋</li>
+                    <li>公司邮编：210000</li>
+                    <li>公司邮箱：bd@njxbz.online</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="map"></div>
+    </div>
+
+</div>
+@@include("../../template/footer_web.html", {"title": "footer"})
+</body>
+</html>

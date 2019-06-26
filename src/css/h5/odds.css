@@ -1,0 +1,245 @@
+body{
+    background: #efefef;
+}
+
+
+.header_logo{
+    height: 0.56rem;
+    width: 1.9rem;
+    background: url("../../img/new_logo .png") no-repeat;
+    background-size: 100%;
+    margin-left:0.3rem; ;
+}
+#header{
+    height: 1.04rem;
+    background: #000;
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.header_menu{
+    font-size: 0.44rem;
+    color: #fff;
+    text-align: right;
+    padding-right: 0.44rem;
+    flex-grow: 3;
+}
+.nav_list{
+    position: fixed;
+    top: 1.04rem;
+    right: -60%;
+    width: 60%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 0.4rem;
+    transition: 0.6s;
+}
+.nav_list li{
+    padding: 0 0.4rem;
+    line-height: 0.8rem;
+    border-bottom: 1px solid;
+}
+
+#target{
+    padding: 0.3rem;
+    background: #fff;
+    margin-bottom: 0.3rem;
+}
+ .nav{
+    font-size: 0.3rem;
+    padding-left: 0.25rem;
+    border-left: 0.02rem solid #ff7500;
+    margin-bottom: 0.3rem;
+}
+.target{
+    color: #ff7500;
+    font-size: 0.24rem;
+}
+.target_list{
+    font-size: 0.24rem;
+    line-height:0.7rem; ;
+}
+
+#shopping{
+    background: #fff;
+    padding:0.3rem;
+}
+.shopping{
+    display: flex;
+    justify-content: space-around;
+}
+.shopping img{
+    width: 2.24rem;
+    height: 1.54rem;
+}
+#shopping p{
+    font-size: 0.24rem;
+    color: #ff7500;
+    padding-bottom: 0.2rem;
+    text-align: center;
+}
+#content_item{
+    padding: 0.3rem;
+    background: #fff;
+    margin-top: 0.3rem;
+}
+.item ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.item li{
+    width:3.39rem ;
+    height: 2.26rem;
+    margin-top: 0.2rem;
+    font-size: 0.24rem;
+    color: #fff;
+    position: relative;
+}
+.item img{
+    width: 100%;
+}
+.item p{
+    position: absolute;
+    width:3.39rem ;
+    height: 2.26rem;
+    background:rgba(0,0,0,0.5) ;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: flex-end;
+}
+.item span{
+    display: inline-block;
+    padding: 0.3rem;
+}
+
+#product{
+    padding: 0.3rem;
+    background: #fff;
+    font-size: 0.24rem;
+    margin-top: 0.3rem;
+}
+.product{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.2rem;
+}
+.product img{
+    width: 2.78rem;
+    height: 1.54rem;
+}
+.product>div:nth-of-type(2){
+    flex-grow: 3;
+    padding-left: 0.4rem;
+}
+.product p{
+    line-height: 0.36rem;
+}
+
+#list{
+    padding: 0.3rem;
+    background: #fff;
+    margin-top: 0.3rem;
+}
+.list{
+    width: 3.36rem;
+    height: 0.64rem;
+    line-height: 0.64rem;
+    color: #fff;
+    background: #ff7500;
+    font-size: 0.24rem;
+    border-radius: 0.04rem;
+    margin-top: 0.2rem;
+    text-align: center ;
+}
+#list ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#odds{
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    background: #fff;
+}
+
+
+
+
+.footer_top{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #fff;
+}
+.footer{
+    background: #737f95;
+    padding: 1vh;
+    font-size: 0.28rem;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+}
+.footer_wz{
+    text-align: center;
+}
+
+.odds >span{
+    display: inline-block;
+    height: 0.7rem;
+    width: 0.7rem;
+    background: #ff7500;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.22rem;
+    position: relative;
+    text-align: center;
+}
+.odds >span:after{
+    display: block;
+    content: "";
+    width:0;
+    height:0;
+    border-width:0.15rem 0.15rem 0;
+    border-style:solid;
+    border-color:#333 transparent transparent;/*灰 透明 透明 */
+    margin:40px auto;
+    position:absolute;
+    top:-0.06rem;
+    left: 0.2rem;
+}
+.odds_list{
+    margin-top: 0.18rem;
+    margin-left: 0.16rem;
+    display: flex;
+    justify-content: space-around;
+}
+.odds_num{
+    height: 0.33rem;
+    width: 0.33rem;
+    background: #ff7500;
+    color: #fff;
+    font-size: 0.26rem;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 0.08rem;
+}
+.odds_info{
+    flex-grow: 2;
+    margin-left: 0.16rem;
+
+}
+.odds_info p{
+    font-size: 0.36rem;
+    color: #ff7500;
+}
+.odds_info span{
+    font-size: 0.24rem;
+    width: 100%;
+    display: inline-block;
+}

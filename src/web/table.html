@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+@@include("../../template/header_web.html", {"title": "header"})
+
+<div class="table">
+    <div class="content">
+        <nav class="nav"><span>在线申请</span></nav>
+        <div id="table">
+            <div class="name">
+                <span>申请类别</span>
+                <button>渠道合作</button>
+            </div>
+            <div class="item">
+                <div class="list">
+                    <p>所在城市</p>
+                    <div class="list_select">
+                        <select name="" >
+                            <option value="请选择" v-for="data in citys">{{data.name}}</option>
+                        </select>
+                        <select name="">
+                            <option value="" v-for="data in  city_1">{{data}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="list">
+                    <p>申请城市</p>
+
+                    <div class="select_right list_select">
+                        <select name="" >
+                            <option value="请选择" v-for="data in citys">{{data.name}}</option>
+                        </select>
+                        <select name="">
+                            <option value="" v-for="data in  city_1">{{data}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="list"><span class="input_name">姓名</span> <input type="text"></div>
+                <div class="list"><span class="input_name">手机号码</span> <input type="text"></div>
+                <div class="list"><span class="input_name">邮箱</span> <input type="text"></div>
+                <div class="list"><span class="input_name">所在地址</span> <input type="text"></div>
+                <div class="list last"><span class="input_name">职位</span> <input type="text"></div>
+            </div>
+            <div class="item">
+                <div class="list">
+                    <div class="name">信息来源</div>
+                    <div class="list_radio">
+                        <p><input type="radio" class="radio"/> <b>网络搜索</b></p>
+                        <p><input type="radio" class="radio"/> <b>网站新闻</b></p>
+                        <p><input type="radio" class="radio"/> <b>朋友介绍</b></p>
+                        <p><input type="radio" class="radio"/> <b>机身电话</b></p>
+                        <p><input type="radio" class="radio"/> <b>微信</b></p>
+                        <p><input type="radio" class="radio"/> <b>市场电话</b></p>
+                        <p><input type="radio" class="radio"/> <b>其他</b></p>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="name">关心问题</div>
+                    <div class="list_radio">
+                        <p><input type="radio" class="radio"/> <b>价格</b></p>
+                        <p><input type="radio" class="radio"/> <b>合作方式</b></p>
+                        <p><input type="radio" class="radio"/> <b>售后</b></p>
+                        <p><input type="radio" class="radio"/> <b>培训</b></p>
+                        <p><input type="radio" class="radio"/> <b>水果供给</b></p>
+                        <p><input type="radio" class="radio"/> <b>设备性能</b></p>
+                        <p><input type="radio" class="radio"/> <b>食品安全</b></p>
+                        <p><input type="radio" class="radio"/> <b>其他 </b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="text_name">可用资金描述</div>
+                <div class="text"><textarea name=""  placeholder="请简述您自己可直接使用的资金，以及可融资的金额。如;共200万，其中自有资金50万，引入合伙人投资150万"></textarea></div>
+            </div>
+            <div class="item">
+                <div class="text_name">渠道资源描述</div>
+                <div class="text"><textarea name="" id="" cols="30" rows="10" placeholder="请简述您自己可直接使用的资金，以及可融资的金额。如;共200万，其中自有资金50万，引入合伙人投资150万"></textarea></div>
+            </div>
+            <div class="item">
+                <div class="text_name">管理资源描述</div>
+                <div class="text"><textarea name="" id="" cols="30" rows="10" placeholder="请简述您自己可直接使用的资金，以及可融资的金额。如;共200万，其中自有资金50万，引入合伙人投资150万"></textarea></div>
+            </div>
+            <div class="item">
+                <div class="text_name">其他信息</div>
+                <div class="text"><textarea name="" id="" cols="30" rows="10"></textarea></div>
+            </div>
+            <div class="item">
+                <div class="text_name">您从何总渠道了解到阿橙果啦</div>
+                <div class="from">
+                    <div>
+                        <div class="icon"><input type="radio"></div>
+                        <div class="form_info">现场考察阿橙果啦销售终端</div>
+                    </div>
+                    <div>
+                        <div class="icon"><input type="radio"></div>
+                        <div class="form_info">加盟商引荐</div>
+                    </div>
+                    <div>
+                        <div class="icon"><input type="radio"></div>
+                        <div class="form_info">媒体报道</div>
+                    </div>
+                    <div>
+                        <div class="icon"><input type="radio"></div>
+                        <div class="form_info">其他</div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="text_name">您是否考察过阿橙果啦</div>
+                <div class="check">
+                    <span><input type="radio" value="look">是</span>
+                    <span><input type="radio" value="look">否</span>
+                </div>
+            </div>
+            <div class="btn">
+                <button>提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+@@include("../../template/footer_web.html", {"title": "footer"})
+</body>
+</html>

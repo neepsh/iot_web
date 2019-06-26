@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+@@include("../../template/header_web.html", {"title": "header"})
+
+<div class="web_about">
+    <div id="banner">
+        <img :src="banner" alt="">
+    </div>
+    <div id="contents">
+
+        <nav class="nav">
+            <p>公司简介</p>
+            <span>Company profile</span>
+        </nav>
+        <div class="content">
+            <div class="img">
+                <img :src="img.company" alt="company">
+            </div>
+            <div class="company_info">
+                <p>  南京鑫倍泽物联科技有限公司总部位于紫金山脉之南麒麟科技创新园华清园。自成立后，
+                    一直以南理工为科研后盾，与该校的机器人研究所、自动化学院等有长期合作关系。目前已推
+                    出新零售模式下的果汁机器人+网红产品无人化购物场景，新产品落地正处于大力推广阶段。
+                    新配套-“拿了就走”、“关门结算”的自助贩售机（人脸识别技术、重力感应、红外扫码、
+                    后台数据采集、分析、结算）快速落地是我们团队经验整合所得，打造具有现代感的无人值守
+                    购物体验店。体现出鑫倍泽具有自动化核心技术与多层经验，最终实现新零售“无人果吧”,
+                    实现资源共享。·维空间·隶属于南京鑫倍泽物联科技有限公司。</p>
+            </div>
+        </div>
+        <div class="content">
+
+            <div class="item">
+                <router-link to="odds">
+                    <img :src="img.img2" alt="">
+                    <p>公司优势</p>
+                </router-link>
+
+            </div>
+            <div class="item">
+                <router-link to="join">
+                    <img :src="img.img3" alt="">
+                    <p>我们的目标</p>
+                </router-link>
+
+            </div>
+            <div class="item" >
+                <router-link to="join">
+                    <img :src="img.img4" alt="">
+                    <p>活动 · 案例</p>
+                </router-link>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include("../../template/footer_web.html", {"title": "footer"})
+
+</body>
+</html>
