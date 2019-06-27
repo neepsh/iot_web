@@ -58,5 +58,38 @@
         <p> 回到顶部</p>
     </div>
 </div>
-<script src="../js/zepto.min.js"></script>
+
+
 </body>
+<script src="../js/zepto.min.js"></script>
+<script>
+    window.onload=function () {
+
+        function smoothscroll() {
+
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            if (currentScroll > 0) {
+                window.requestAnimationFrame(smoothscroll);
+                window.scrollTo(0, currentScroll - (currentScroll / 5));
+            }
+        };
+
+        $('.sidebar').click(smoothscroll);
+
+        $('#sidebar').css("left",(document.documentElement.clientWidth - 1200) / 2 + 1200) ;
+
+        window.onmousewheel=function () {
+            var top = document.documentElement.scrollTop||document.body.scrollTop;
+            console.log(top)
+            if (top > 300) {
+
+                $('#sidebar').show();
+            } else {
+                $('#sidebar').hide();
+            }
+        }
+
+    }
+
+</script>
+

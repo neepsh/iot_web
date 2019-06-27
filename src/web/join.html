@@ -103,5 +103,25 @@
 </div>
 @@include("../../template/footer_web.html", {"title": "footer"})
 
-</body>
+<script>
+    window.onload=function () {
+        var aItem=document.querySelectorAll('.market_left>div'),
+            aP=document.querySelectorAll('.market_left p'),
+            oBox=document.querySelector('.market_right>div');
+
+        var oLast=aP[0];
+
+        for(var i=0;i<aItem.length;i++){
+            aItem[i].index=i;
+            aItem[i].onclick=function () {
+                oLast.classList.remove('p_active');
+                oBox.style.top=-715*this.index+'px';
+                aP[this.index].classList.add('p_active');
+                oLast=aP[this.index];
+            }
+        }
+    }
+
+</script>
+
 </html>

@@ -27,21 +27,21 @@
 .market_list:hover{
 }
 .market_list:nth-of-type(1){
-    background: url('../../assets/img/market1_1.png');
+    background: url('../../img/market1_1.png');
     background-size: cover;
 }
 .market_list:nth-of-type(2){
     color: #000;
-    background: url('../../assets/img/market2_1.png');
+    background: url('../../img/market2_1.png');
     background-size: cover;
 }
 .market_list:nth-of-type(3){
-    background: url('../../assets/img/market3_1.png');
+    background: url('../../img/market3_1.png');
     background-size: cover;
 }
 .market_list:nth-of-type(4){
     color: #000;
-    background: url('../../assets/img/market4_1.png');
+    background: url('../../img/market4_1.png');
     background-size: cover;
 }
 .market{
@@ -78,19 +78,19 @@
 }
 .market_left>div:nth-of-type(1){
     background-size: cover;
-    background: url("../../assets/img/market1.png") no-repeat;
+    background: url("../../img/market1.png") no-repeat;
 }
 .market_left>div:nth-of-type(2){
-    background: url("../../assets/img/market2.png") no-repeat ;
+    background: url("../../img/market2.png") no-repeat ;
     background-size: cover;
 }
 .market_left>div:nth-of-type(3){
     background-size: cover;
-    background: url("../../assets/img/market3.png") no-repeat ;
+    background: url("../../img/market3.png") no-repeat ;
     background-size: cover;
 }
 .market_left>div:nth-of-type(4){
-    background: url("../../assets/img/market4.png") no-repeat ;
+    background: url("../../img/market4.png") no-repeat ;
     background-size: cover;
 }
 .market_list{}
