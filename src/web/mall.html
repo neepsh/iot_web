@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>商城</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/web/iot.css"/>
     <style>
         .banner img{
             width: 100%;
@@ -42,15 +44,14 @@
 @@include("../../template/header_web.html", {"title": "header"})
 
 <div class="mall">
-    <div class="banner"><img :src="banner" alt=""></div>
+    <div class="banner"><img src="../img/mall_banner.jpg" alt=""></div>
     <div class="nav">
         <p>在线商城</p>
         <span>online shopping mall</span>
     </div>
-    <div class="img"><img :src="img" alt=""></div>
+    <div class="img"><img src="../img/sc.png" alt=""></div>
 </div>
 
 @@include("../../template/footer_web.html", {"title": "footer"})
 
-</body>
 </html>

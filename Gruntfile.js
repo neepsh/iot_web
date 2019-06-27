@@ -3,11 +3,22 @@ module.exports = function (grunt) {
         includereplace: {
 
 
-            cwd: {
-                src: ['src/*'],
+           /* cwd: {
+                src: ['web/!*'],
                 dest: 'dist/',
                 expand: true,
-                cwd: 'template'
+                cwd: 'src'
+            },*/
+            multisrcdest: {
+
+                files: [
+                    {src: '**/*.js', dest: 'dist/js', expand: true, cwd: 'src/js'},
+                    {src: '**/*.html', dest: 'dist/web', expand: true, cwd: 'src/web'},
+                    {src: '**/*.html', dest: 'dist/h5', expand: true, cwd: 'src/h5'},
+                    {src: '**', dest: 'dist/img', expand: true, cwd: 'src/img'},
+                    {src: '**/*.css', dest: 'dist/css', expand: true, cwd: 'src/css'}
+
+                ]
             }
 
         },
@@ -25,5 +36,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-nodeunit')
     grunt.loadTasks('tasks')
 
-    grunt.registerTask('default', ['includereplace'])
+    grunt.registerTask('default', [ "clean",'includereplace'])
 }

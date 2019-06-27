@@ -2,15 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>关于我们</title>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/web/iot.css"/>
+    <style>
+        #banner img {
+            width: 100%;
+            margin-top: -25px;
+        }
+        #content {
+            width: 1200px;
+            padding-top: 55px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+        }
+
+        .nav {
+            text-align: center;
+            position: relative;
+        }
+
+        .nav p {
+            font-size: 24px;
+            padding: 0 200px 22px 200px;
+            width: 180px;
+            margin: 0 auto;
+            border-bottom: 2px solid #ff7500;
+        }
+
+        .nav span {
+            display: inline-block;
+            font-size: 18px;
+            color: #656565;
+            position: absolute;
+            bottom: -10px;
+            background: #fff;
+            left: 43%;
+            padding: 0 10px;
+        }
+        .product img{
+            width: 100%;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-
 @@include("../../template/header_web.html", {"title": "header"})
 
 <div class="web_about">
     <div id="banner">
-        <img :src="banner" alt="">
+        <img src="../img/company_banner_02.jpg" alt="">
     </div>
     <div id="contents">
 
@@ -20,7 +61,7 @@
         </nav>
         <div class="content">
             <div class="img">
-                <img :src="img.company" alt="company">
+                <img src="../img/banner_about.png" alt="company">
             </div>
             <div class="company_info">
                 <p>  南京鑫倍泽物联科技有限公司总部位于紫金山脉之南麒麟科技创新园华清园。自成立后，
@@ -35,24 +76,24 @@
         <div class="content">
 
             <div class="item">
-                <router-link to="odds">
-                    <img :src="img.img2" alt="">
+                <a href="odds.html">
+                    <img src="../img/company_07.png" alt="">
                     <p>公司优势</p>
-                </router-link>
+                </a>
 
             </div>
             <div class="item">
-                <router-link to="join">
-                    <img :src="img.img3" alt="">
+                <a href="odds.html">
+                    <img src="../img/company_18.png" alt="">
                     <p>我们的目标</p>
-                </router-link>
+                </a>
 
             </div>
             <div class="item" >
-                <router-link to="join">
-                    <img :src="img.img4" alt="">
+                <a href="join.html">
+                    <img src="../img/company_15.png" alt="">
                     <p>活动 · 案例</p>
-                </router-link>
+                </a>
 
             </div>
         </div>
@@ -62,5 +103,4 @@
 
 @@include("../../template/footer_web.html", {"title": "footer"})
 
-</body>
 </html>

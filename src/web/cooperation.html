@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+    <title>商务合作</title>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/web/iot.css"/>
+    <link rel="stylesheet" href="../css/web/coopration.css"/>
 </head>
 <body>
-
 
 @@include("../../template/header_web.html", {"title": "header"})
 
 <div class="h5_cooperation">
 
     <div id="banner">
-        <img :src="banner" alt="*">
+        <img src="../img/hezuo_banner_02.jpg" alt="*">
     </div>
 
     <div id="content">
@@ -22,25 +25,25 @@
                 <span>supply chain</span>
             </nav>
             <div class="item_img content">
-                <img :src="item_img.img1" alt="#">
-                <div class="supply">
-                    <div class="supply_list">
-                        <nav>加盟商</nav>
-                        <p>每台押金5万（五台以上）</p>
-                        <p>加盟三年以上</p>
-                        <p>押金逐年返还</p>
-                        <p>合同到期后返还所有押金</p>
-                        <p>每月返还每台机器利润的15%-20%</p>
-                        <p>提供所有服务</p>
-                    </div>
-                    <div class="supply_list">
-                        <nav>代理商</nav>
-                        <p>每台榨汁机售价5万</p>
-                        <p>选择代理区域</p>
-                        <p>收缴每台机器利润的15%-20%</p>
-                        <p>提供所有服务</p>
-                    </div>
-                </div>
+                <img src="../img/hezuo.png" alt="#">
+                <!-- <div class="supply">
+                     <div class="supply_list">
+                         <nav>加盟商</nav>
+                         <p>每台押金5万（五台以上）</p>
+                         <p>加盟三年以上</p>
+                         <p>押金逐年返还</p>
+                         <p>合同到期后返还所有押金</p>
+                         <p>每月返还每台机器利润的15%-20%</p>
+                         <p>提供所有服务</p>
+                     </div>
+                     <div class="supply_list">
+                         <nav>代理商</nav>
+                         <p>每台榨汁机售价5万</p>
+                         <p>选择代理区域</p>
+                         <p>收缴每台机器利润的15%-20%</p>
+                         <p>提供所有服务</p>
+                     </div>
+                 </div>-->
             </div>
 
         </div>
@@ -51,7 +54,7 @@
             </nav>
             <div class="item_flex content">
                 <div class="img">
-                    <img :src="item_img.img2" alt="#">
+                    <img src="../img/web_11.jpg" alt="#">
                 </div>
                 <div class="info">
                     <div class="infos">整机自主研发，创新性采用 机械手压力感应系统，产品技术行业领先。 先进的榨取方式，杜绝农药残留等安全隐患，最大程度的保存的橙子的果肉，以及高的出汁率。让果汁拥有无与伦比的口感</div>
@@ -74,7 +77,7 @@
                     <p> <i class="icon-0334"></i>统一运营：对所有加盟商进行免费拿线上线下运行，提高用户数量。</p>
                 </div>
                 <div class="img">
-                    <img :src="item_img.img3" alt="#">
+                    <img src="../img/web_15.jpg" alt="#">
                 </div>
             </div>
         </div>
@@ -85,12 +88,14 @@
                 <span>Our main channel</span>
             </nav>
             <div class="item_img content">
-                <img :src="item_img.img4" alt="#">
+                <img src="../img/web_item_07.jpg" alt="#">
             </div>
         </div>
 
     </div>
 </div>
+
 @@include("../../template/footer_web.html", {"title": "footer"})
-</body>
+
+
 </html>

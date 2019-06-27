@@ -6,6 +6,9 @@
     font-size: 18px;
     line-height: 40px;
 }
+#product_info{
+    display: none;
+}
 .system p{
     text-indent: 2em;
     padding-top: 20px;

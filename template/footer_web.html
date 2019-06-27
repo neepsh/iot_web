@@ -1,47 +1,62 @@
 
-<footer id="footer">
+<footer v-if="data.web_type=='web'" id="footer">
     <div class="footer">
         <div class="footer_top">
-            <div>网站首页</div>
-            <div>产品介绍</div>
-            <div>服务支持</div>
-            <div>商务合作</div>
-            <div>在线商城</div>
-            <div>品牌故事</div>
-            <div>加入我们</div>
-            <div>联系我们</div>
+            <div>
+                <a href="index.ntml">网站首页</a>
+            </div>
+            <div>
+                <a href="product.ntml">网站首页</a>
+            </div>
+            <div>
+                <a href="odds.html">我们的优势</a>
+            </div>
+            <div>
+                <a href="about.html">关于我们</a>
+            </div>
+            <div>
+                <a href="server.html">服务支持</a>
+            </div>
+            <div>
+                <a href="cooperation.html">商务合作</a>
+            </div>
+
         </div>
         <div class="footers">
-            <div class="footer_item">
-                <nav>关于我们</nav>
-                <div>公司介绍</div>
-                <div>企业文化</div>
-                <div>我们的团队</div>
-                <div>公司地址</div>
+            <div>
+                <i class="icon-0255"></i>
+                <p>联系方式</p>
+                <div>400-8288-251</div>
             </div>
-            <div class="footer_item">
-                <nav>在线商城</nav>
-                <div>免零钱交易</div>
-                <div>快速注册</div>
-                <div>消费查询</div>
-                <div>不定期优惠</div>
+            <div>
+                <i class="icon-0956"></i>
+                <p>服务邮箱</p>
+                <div>bd@njxz.online</div>
             </div>
-            <div class="footer_item">
-                <nav>品牌故事</nav>
-                <div>公司新闻</div>
-            </div>
-            <div class="footer_item">
-                <nav>联系我们</nav>
-                <div>地址：南京市江宁区麒麟街道华清园5栋308室</div>
-                <div>电话：88888888</div>
-                <div>网址：www.njxbz.com</div>
+            <div>
+                <i class="icon-0504"></i>
+                <p>公司地址</p>
+                <div>南京麒麟科技创新园华清园5栋308</div>
             </div>
         </div>
     </div>
-
     <div class="footer_wz">
-        © Copyright © 2018 - 2020 luidea.com All rights reserved.  备案编号：苏ICP备18032956号
+        © Copyright © 2018 - 2020 阿橙果啦 版权所有. 备案编号：苏ICP备18032956号
     </div>
 
 </footer>
+
+<div id="sidebar">
+    <div class="sidebar">
+        <a href="table.html">立刻申请</a>
+    </div>
+    <div class="sidebar">
+        <a href="condition.html">申请条件</a>
+    </div>
+    <div class="sidebar" >
+        <i class="icon-0482"></i>
+        <p> 回到顶部</p>
+    </div>
+</div>
+<script src="../js/zepto.min.js"></script>
 </body>

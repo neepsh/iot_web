@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>联系我们</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/web/iot.css">
+    <link rel="stylesheet" href="../css/web/table.css">
 </head>
 <body>
 
@@ -22,10 +25,10 @@
                     <p>所在城市</p>
                     <div class="list_select">
                         <select name="" >
-                            <option value="请选择" v-for="data in citys">{{data.name}}</option>
+                            <option value="请选择" ></option>
                         </select>
                         <select name="">
-                            <option value="" v-for="data in  city_1">{{data}}</option>
+                            <option value=""></option>
                         </select>
                     </div>
                 </div>
@@ -34,10 +37,10 @@
 
                     <div class="select_right list_select">
                         <select name="" >
-                            <option value="请选择" v-for="data in citys">{{data.name}}</option>
+                            <option value="请选择" ></option>
                         </select>
                         <select name="">
-                            <option value="" v-for="data in  city_1">{{data}}</option>
+                            <option value="" ></option>
                         </select>
                     </div>
                 </div>
@@ -127,5 +130,8 @@
     </div>
 </div>
 @@include("../../template/footer_web.html", {"title": "footer"})
-</body>
+
+<script>
+
+</script>
 </html>

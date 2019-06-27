@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>我们的目标</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/web/iot.css"/>
+    <link rel="stylesheet" href="../css/web/odds.css">
 </head>
 <body>
 
@@ -10,7 +13,7 @@
 
 <div class="web_odds">
     <div id="banner">
-        <img :src="msg.banner" alt="banner">
+        <img src="../img/odds_bg.jpg" alt="banner">
     </div>
     <nav class="nav">
         <p>我们的优势</p>
@@ -49,116 +52,36 @@
             <div class="list_content">
 
                 <div class="list_img active">
-                    <img :src="msg.img1" alt="#">
+                    <img src="../img/odds3.png" alt="#">
                 </div>
-                <div class="list_img"><img :src="msg.img2" alt="#"></div>
-                <div class="list_img"><img :src="msg.img3" alt="#"></div>
-                <div class="list_img"><img :src="msg.img4" alt="#"></div>
-                <div class="list_img"><img :src="msg.img5" alt="#"></div>
+                <div class="list_img"><img src="../img/odds5.png" alt="#"></div>
+                <div class="list_img"><img src="../img/odds1.png" alt="#"></div>
+                <div class="list_img"><img src="../img/odds2.png" alt="#"></div>
+                <div class="list_img"><img src="../img/odds4.png" alt="#"></div>
 
             </div>
 
         </div>
-        <!-- <div class="item">
-             <nav class="nav">
-                 <p>公司简介</p>
-                 <span>Company profile</span>
-             </nav>
-             <div class="content">
-                 <div class="img"><img :src="msg.img1" alt=""></div>
-                 <div class="info">
-                     <p>破除快速致富的迷思，制定行之有效的目标计划沉淀出一定的口碑，转介绍 升级</p>
-                     <p>超高度专业，高度附加值方向发展。机构设置有培训部，营销中心，活动推广中心</p>
-                     <p>持续不断的创造经营，不断进取，智能服务，精简流程，超前技术模式，绿 色环境配套人员</p>
-                     <p>没有找出店铺在市场上的区隔定位 </p>
-                 </div>
-             </div>
-         </div>
-         <div class="item">
-             <nav class="nav">
 
-                 <p>我们的目标</p>
-                 <span>Our goal</span>
-             </nav>
-             <div class="content">
-                 <div class="content_img">
-                     <img :src="msg.img2" alt="">
-                 </div>
-             </div>
-         </div>
-         <div class="item">
-             <nav class="nav">
-                 <p>消费模式</p>
-                 <span>Consumption patterns</span>
-             </nav>
-             <div class="content">
-                  <div class="item">
-                      <img :src="msg.img3" alt="">
-                  </div>
-                 <div class="item">
-                     <img :src="msg.img4" alt="">
-                 </div>
-                 <div class="item">
-                     <img :src="msg.img5" alt="">
-                 </div>
-             </div>
-
-         </div>
-         <div class="item">
-             <nav class="nav">
-                 <p>六大优势</p>
-                 <span>Six major advantages</span>
-             </nav>
-             <div class="content">
-                 <div class="content_img">
-                     <img :src="msg.img6 " alt="">
-                 </div>
-             </div>
-         </div>
-         <div class="item">
-             <nav class="nav">
-                 <p>产品体系</p>
-                 <span>Product system</span>
-             </nav>
-             <div class="content">
-                 <div class="items">
-                     <div>
-                         <img :src="msg.product1" alt="">
-                     </div>
-                     <p><i class="icon-0350"></i> 果粒橙口味纯正 </p>
-                     <p><i class="icon-0350"></i> 榨取快速卫生 </p>
-                     <p><i class="icon-0350"></i> 机器占地面积小 </p>
-                 </div>
-                 <div class="items">
-                     <div>
-                         <img :src="msg.product2" alt="">
-                     </div>
-                     <p><i class="icon-0350"></i> 果粒橙口味纯正 </p>
-                     <p><i class="icon-0350"></i> 榨取快速卫生 </p>
-                     <p><i class="icon-0350"></i> 机器占地面积小 </p>
-                 </div>
-                 <div class="items">
-                     <div>
-                         <img :src="msg.product2" alt="">
-                     </div>
-                     <p><i class="icon-0350"></i> 果粒橙口味纯正 </p>
-                     <p><i class="icon-0350"></i> 榨取快速卫生 </p>
-                     <p><i class="icon-0350"></i> 机器占地面积小 </p>
-                 </div>
-                 <div class="items">
-                     <div>
-                         <img :src="msg.product2" alt="">
-                     </div>
-                     <p><i class="icon-0350"></i> 果粒橙口味纯正 </p>
-                     <p><i class="icon-0350"></i> 榨取快速卫生 </p>
-                     <p><i class="icon-0350"></i> 机器占地面积小 </p>
-                 </div>
-
-             </div>
-         </div>-->
     </div>
 </div>
 @@include("../../template/footer_web.html", {"title": "footer"})
+<script>
+    var aItem=document.querySelectorAll('.item>div'),
+        aBox=document.querySelectorAll('.list_img');
+    var oLast=aItem[0];
 
-</body>
+    for(var i=0;i<aItem.length;i++){
+        aItem[i].index=i;
+        aItem[i].onmouseover=function () {
+            for(var i=0;i<aBox.length;i++){
+                aBox[i].classList.remove('active');
+            }
+            aBox[this.index].classList.add('active');
+            oLast.classList.remove('active');
+            this.classList.add('active');
+            oLast=this
+        }
+    }
+</script>
 </html>
