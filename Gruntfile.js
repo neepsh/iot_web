@@ -21,7 +21,6 @@ module.exports = function (grunt) {
             }
 
         },
-
         nodeunit: {
             files: ['test/*.js']
         },
@@ -35,5 +34,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-nodeunit')
     grunt.loadTasks('tasks')
 
-    grunt.registerTask('default', [ "clean",'includereplace'])
+    grunt.registerTask('default', [ 'includereplace'])
 }

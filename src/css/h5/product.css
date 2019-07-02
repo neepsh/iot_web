@@ -1,0 +1,48 @@
+.banner img{
+    width: 100%;
+}
+.content{
+    padding: 0.3rem;
+    color: #666666;
+    background: #fff;
+}
+.name{
+    font-size: 0.28rem;
+    padding-bottom: 0.28rem;
+    color: #333333;
+}
+.item{
+    padding: 22px 0;
+    border-top: 1px solid #999999;
+}
+.nav{
+    font-size: 0.26rem;
+    padding-bottom: 0.2rem;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    font-size: 0.24rem;
+}
+.info ul{
+    width: 50%;
+}
+.info span{
+    width: 35%;
+    display: inline-block;
+}
+.info ul:nth-of-type(2){
+    margin-left: 0.1rem;
+}
+.info li{
+    line-height: 0.5rem;
+}
+.list{
+    font-size: 0.24rem;
+}
+.list p{
+    line-height: 0.5rem;
+}
+#product_info{
+    display: none;
+}

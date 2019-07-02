@@ -1,0 +1,59 @@
+.note{
+    padding: 0.3rem 0;
+}
+.ctrl{
+    width: 5.5rem;
+    margin: 0 auto;
+    padding-bottom: 0.3rem;
+}
+.ctrl b{
+    height: 1rem;
+    width: 0.2rem;
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    background: #ff7500;
+}
+.ctrl span{
+    display: inline-block;
+    margin-left: 0.3rem;
+    font-size:0.24rem; ;
+}
+
+.ctrl li{
+    font-size: 0;
+    position: relative;
+    height: 1.2rem;
+}
+.item{
+    margin-top: 0.3rem;
+    border-bottom:1px solid #d9d9d9;
+
+}
+.list{
+    display: flex;
+    justify-content: space-around;
+}
+.list_name{
+    color: #ff7500;
+    width: 1.2rem;
+}
+.list>div:nth-of-type(2){
+    flex-grow: 3;
+    margin-left: 0.3rem;
+    padding-bottom: 0.25rem;
+}
+.list p{
+    padding-bottom: 0.25rem;
+}
+.nav{
+    font-size: 0.28rem;
+    color: #ff7500;border-bottom: 1px solid #d9d9d9;
+    padding: 0.2rem 0;
+}
+.condition{
+    padding: 0.3rem;
+    background: #fff;
+    font-size: 0.24rem;
+
+}
