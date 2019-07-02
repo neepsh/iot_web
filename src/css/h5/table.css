@@ -1,0 +1,121 @@
+.btn{
+    padding: 0.3rem;
+    text-align: center;
+}
+.btn button{
+    width: 1.21rem;
+    height: 0.41rem;
+    border: none;
+    color: #fff;
+    background: #ff7500;
+}
+.item>div{
+    display: flex;
+    justify-content: space-around;
+}
+.item_contents{
+    flex-grow: 3;
+    margin-left: 0.3rem;
+}
+.item_content{
+    flex-grow: 3;
+    margin-left: 0.3rem;
+}
+.item{
+    padding-bottom: 0.3rem;
+}
+.item_content>div{
+    padding-bottom: 0.3rem;
+}
+.item_content input[type=text]{
+    width: 4rem;
+    border:1px solid #d9d9d9;
+    height: 0.43rem;
+}
+.item{
+    margin-top: 0.3rem;
+}
+.item_name{
+    width: 100px;
+    color: #ff7500;
+}
+.table_text{
+    margin-top: 0.3rem;
+    border-bottom: 1px solid #a6a6a6;
+}
+.table_text span{
+    width: 1rem;
+    color: #ff7500;
+}
+.table_text textarea{
+    resize: none;
+    width: 5.25rem;
+    height: 1.31rem;
+}
+.table_text>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+.radio_name{
+    width: 1rem;
+    color: #ff7500;
+}
+.radio_content{
+    margin-left: 0.3rem;
+    flex-grow: 3;
+}
+.radio_content >div{
+    padding-bottom: 0.26rem;
+}
+.table_radio{
+    margin-top: 0.26rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #a6a6a6;
+}
+.table_radio>div{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.table_ul{
+    border-bottom: 1px solid #a6a6a6;
+}
+.ul_name{
+    color: #ff7500;
+    width: 1rem;
+    text-align: right;
+}
+.ul_content input{
+    width: 3.84rem;
+    height: 0.43rem;
+    border: 1px solid #d9d9d9 ;
+}
+.ul_content select{
+    width: 1.83rem;
+    height: 0.43rem;
+    margin-right: 0.18rem;
+}
+.ul_content button{
+    width: 1.43rem;
+    height:0.4rem;
+    color: #fff;
+    background: #ff7500;
+    border: none;
+}
+.ul_content{
+    flex-grow: 3;
+    margin-left: 0.35rem;
+    margin-bottom: 0.24rem;
+}
+.table_ul li{
+    display: flex;
+    justify-content: space-around;
+}
+.table_h5{
+    padding:0 0.3rem;
+    font-size: 0.24rem;
+    background: #fff;
+}
