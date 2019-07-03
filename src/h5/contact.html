@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/icom.css">
+
+    <link rel="stylesheet" href="../css/h5/iot.css">
+    <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=W37BZ-AECCX-PKG4I-ZVMUY-DXIBZ-CAFN7"></script>
     <style>
         #banner img {
             width: 100%;
@@ -69,7 +72,7 @@
 </head>
 <body>
 
-@@include('../../template/header_h5.html',{'title':"header"})
+@@include("../../template/header_h5.html", {"title": "header"})
 
 <div class="h5_contact">
 
@@ -98,7 +101,7 @@
     </div>
 </div>
 
-@@include('../../template/footer_h5.html',{'title,:'footer''})
+@@include("../../template/footer_h5.html", {"title" :  "footer"})
 <script>
 
     function init() {
@@ -116,7 +119,7 @@
         infoWin.setPosition(map.getCenter());
 
         //setContent()设置信息窗口显示区的内容
-        infoWin.setContent('<div style="display: flex;align-items: center">南京鑫倍泽物联科技 &nbsp  &nbsp<img style="height: 80px;width: 80px;" src="../img/company.png" /></div>');
+        infoWin.setContent(`<div style="display: flex;align-items: center">南京鑫倍泽物联科技 &nbsp  &nbsp<img style="height: 80px;width: 80px;" src="../img/company.png" /></div>`);
 
     }
     init()

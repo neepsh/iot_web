@@ -1,6 +1,9 @@
 .banner img{
     width: 100%;
 }
+#product img{
+    width: 100%;
+}
 .content{
     padding: 0.3rem;
     color: #666666;

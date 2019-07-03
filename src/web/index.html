@@ -166,5 +166,89 @@
 
 @@include("../../template/footer_web.html", {"title": "footer"})
 
+<script src="js/doMove.js"></script>
+<script type="text/javascript">
+
+
+        //banner
+
+        let oBox=document.querySelector('.banner_ref');
+        oBox.innerHTML+=oBox.innerHTML;
+        var aLine=document.querySelectorAll('.banner_line div');
+
+        let aImg=oBox.querySelectorAll('img');
+
+        var oContent=document.querySelector('.banner'),oW=oContent.clientWidth,oH=oW*647/1920,oLeft=document.querySelector(".btn_left"),oRight=document.querySelector('.btn_right');
+
+        var timer=null,num=0,oLast=aLine[0];
+
+        for(var i=0;i<aImg.length;i++){
+
+            aImg[i].style.width=oContent.clientWidth+'px';
+
+        }
+        oContent.style.height=oH+'px';
+
+
+        oLeft.onclick=function(){
+
+            if(num<=0){
+
+                num=aImg.length/2;
+                oBox.style.left= -num*oW + 'px';
+            }
+            num--;
+            doMove(oBox,{left:-num*oW});
+            show_line(num)
+        };
+        oRight.onclick=function(){
+            num++;
+            doMove(oBox,{left:-num*oW},function () {
+                if(num>=aImg.length/2){
+                    oBox.style.left=0;
+                    num=0;
+                }
+            });
+            show_line(num)
+        };
+        oBox.onmouseover=function(){
+            clearInterval(timer);
+        };
+        oBox.onmouseout=function(){
+            timer=setInterval(show_banner,4000)
+        };
+        timer=setInterval(show_banner,4000);
+
+        function show_banner() {
+
+            num++;
+            doMove(oBox,{left:-num*oW},function () {
+                if(num>=aImg.length/2){
+                    oBox.style.left=0;
+                    num=0;
+                }
+            });
+            show_line(num)
+
+        }
+
+        function show_line(num) {
+            oLast.classList.remove('line_active');
+            aLine[num%4].classList.add('line_active');
+            oLast=aLine[num%4];
+        }
+
+        for(var i=0;i<aLine.length;i++){
+            aLine[i].index=i;
+            aLine[i].onclick=function () {
+                num=this.index;
+                doMove(oBox,{left:-num*oW});
+                show_line(num)
+            }
+        }
+
+
+
+</script>
 
 </html>

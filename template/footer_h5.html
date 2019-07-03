@@ -6,22 +6,22 @@
                 <a href="index.html">关于我们</a>
             </div>
             <div>
-                <router-link to="server">服务支持</router-link>
+                <a href="server.html">服务支持</a>
             </div>
             <div>
-                <router-link to="cooperation">商务合作</router-link>
+                <a href="Cooperation.html">商务合作</a>
             </div>
             <div>
-                <router-link to="join">加入我们</router-link>
+                <a href="table.html">立即申请</a>
             </div>
             <div>
-                <router-link to="contact">联系我们</router-link>
+                <a href="contact.html">联系我们</a>
             </div>
 
         </div>
         <div>
             <p>联系电话：025-8652-8059</p>
-            <p>公司邮箱：zhangyueqing@njxbz.online</p>
+            <p>公司邮箱：bd@njxz.online</p>
         </div>
     </div>
 </footer>
@@ -32,6 +32,46 @@
     var oW=document.documentElement.clientWidth/7.5;
 
     document.getElementsByTagName('html')[0].style.fontSize=oW+'px';
+
+    var nav_status = false, ul_status = false, status = true;
+    var oMenu = document.querySelector('.header_menu'),
+        oList = document.querySelector('.nav_list'),
+        oIcon = document.querySelector('.icon-0252'),
+        oUl = document.querySelector('.item_ul');
+
+
+    oMenu.onclick = function () {
+
+        if (nav_status) {
+            oList.style.right = '-60%';
+            nav_status = false
+        } else {
+            oList.style.right = 0;
+            nav_status = true
+        }
+    };
+
+    oIcon.addEventListener('click', function (e) {
+        status = false;
+        if (ul_status) {
+            oUl.style.height = "0";
+            ul_status = false;
+            this.style.transform = "rotate(0deg)";
+        } else {
+            ul_status = true;
+
+            this.style.transform = "rotate(90deg)";
+            oUl.style.height = "2.45rem";
+        }
+    }, false);
+
+    oList.onclick = function () {
+        if (status) {
+            oList.style.right = '-60%';
+            nav_status = false
+        }
+        status = true;
+    };
 
 </script>
 <script>

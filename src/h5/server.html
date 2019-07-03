@@ -5,86 +5,54 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/icom.css">
-    <link rel="stylesheet" href="../css/h5/Cooperation.css">
+    <link rel="stylesheet" href="../css/h5/iot.css">
+    <link rel="stylesheet" href="../css/h5/server.css">
     <title>Title</title>
 </head>
 <body>
-<header id="header">
-    <div class="header_logo"></div>
-    <div class="header_menu"><i class="icon-0210"></i></div>
-    <div class="header_list">
-        <ul class="nav_list">
-            <li>首页</li>
-            <li>产品介绍</li>
-            <li>服务支持</li>
-            <li>商务合作</li>
-            <li>在线商城</li>
-            <li>品牌故事</li>
-            <li>加入我们</li>
-            <li>关于我们</li>
-            <li>联系我们</li>
-        </ul>
-    </div>
-</header>
+@@include("../../template/header_h5.html", {"title":"header"})
 
-<div id="content">
-    <div id="banner">
-        <img src="../img/web_03.jpg" alt="*">
-    </div>
+<div class="h5_server">
 
-    <div class="item">
-        <nav class="nav">
-            <div class="nav_name">服务与支持</div>
-            <div class="nav_info">Services Support</div>
-        </nav>
-        <div class="item">
-            <div class="server_name">高保障多样化的报修服务</div>
-            <ul>
-                <li>1、开发与使用支持：通过远程、现场方式，提供软硬件开发的技术指导，产品使用答疑。</li>
-                <li> 2、培训：针对渠道、代理商、集成商的产品、开发、使用培训。</li>
-                <li>3、行业解决方案集成与推广：针对行业制定、征集行业解决方案。</li>
-                <li>4、开发定制服务：根据客户需求，提供产品软硬件定制服务。</li>
-            </ul>
-        </div>
-        <div class="item">
-            <div class="server_name">服务内容</div>
-            <ul>
-                <li>1、培训支持：总部针对运营商进行统一运维技术培训，快速掌握设备运营基础技能。</li>
-                <li>2、技术支持：7*24小时视频技术指导，终身免费软件升级服务。</li>
-                <li>3、运营支持：总部针对运营商设备设备应用场景、营销活动、市场推广等营销型活动给予培训、策划、指导、更好打造区域消费理念。</li>
-                <li>4、供应链支持：精选来自各地橙子原产地直供。365天为您保障新鲜稳定货源供应，让您更加便捷。</li>
-                <li>5、服务支持：7*24h客服一对一服务。</li>
-                <li>6、数据支持：总部定期利用大数据分析用户货品需求、用户习惯，实时优化投放，让运营利益得到最大化。</li>
-                <li>7、全保VIP服务：返厂寄修、上门服务、意外保障、软件服务。</li>
-                <li>8、延保服务： 在原有保修基础上，可增加1-4年保修服务，总体保修时间不超过5年。保修期内可无限次免费维修或更换整机部件（人为损坏除外）。保修范围涵盖整机核心部件。</li>
-                <li>9、意外保障服务：服务有效期限为3年，服务到期或服务次数使用完毕服务自动终止；本服务是针对保内产品提供的意外保障，过保设备如需购买服务需同时购买延保服务。</li>
-            </ul>
+
+    <div id="content">
+        <div id="banner">
+            <img src="../img/web_03.jpg" alt="*">
         </div>
 
+        <div class="item">
+            <nav class="nav">
+                <div class="nav_name">服务与支持</div>
+                <div class="nav_info">Services Support</div>
+            </nav>
+            <div class="item">
+                <div class="server_name">高保障多样化的报修服务</div>
+                <ul>
+                    <li>1、开发与使用支持：通过远程、现场方式，提供软硬件开发的技术指导，产品使用答疑。</li>
+                    <li> 2、培训：针对渠道、代理商、集成商的产品、开发、使用培训。</li>
+                    <li>3、行业解决方案集成与推广：针对行业制定、征集行业解决方案。</li>
+                    <li>                    4、开发定制服务：根据客户需求，提供产品软硬件定制服务。</li>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="server_name">服务内容</div>
+                <ul>
+                    <li>1、培训支持：总部针对运营商进行统一运维技术培训，快速掌握设备运营基础技能。</li>
+                    <li>2、技术支持：7*24小时视频技术指导，终身免费软件升级服务。</li>
+                    <li>3、运营支持：总部针对运营商设备设备应用场景、营销活动、市场推广等营销型活动给予培训、策划、指导、更好打造区域消费理念。</li>
+                    <li>4、供应链支持：精选来自各地橙子原产地直供。365天为您保障新鲜稳定货源供应，让您更加便捷。</li>
+                    <li>5、服务支持：7*24h客服一对一服务。</li>
+                    <li>6、数据支持：总部定期利用大数据分析用户货品需求、用户习惯，实时优化投放，让运营利益得到最大化。</li>
+                    <li>7、全保VIP服务：返厂寄修、上门服务、意外保障、软件服务。</li>
+                    <li>8、延保服务： 在原有保修基础上，可增加1-4年保修服务，总体保修时间不超过5年。保修期内可无限次免费维修或更换整机部件（人为损坏除外）。保修范围涵盖整机核心部件。</li>
+                    <li>9、意外保障服务：服务有效期限为3年，服务到期或服务次数使用完毕服务自动终止；本服务是针对保内产品提供的意外保障，过保设备如需购买服务需同时购买延保服务。</li>
+                </ul>
+            </div>
+
+        </div>
     </div>
+
 </div>
 
-<footer id="footer">
-
-    <div class="footer">
-        <div class="footer_top">
-            <div>关于我们</div>
-            <div>产品下载</div>
-            <div>技术支持</div>
-            <div>商务合作</div>
-            <div>加入我们</div>
-        </div>
-        <div>
-            <p>联系电话：025-56566</p>
-            <p>商务合作：025-56566</p>
-        </div>
-    </div>
-</footer>
-
-</body>
-<script>
-    var oW=document.documentElement.clientWidth/7.5;
-
-    document.querySelector('html').style.fontSize=oW+'px';
-</script>
+@@include("../../template/footer_h5.html", {"title":"footer"})
 </html>

@@ -5,28 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/icom.css">
+    <link rel="stylesheet" href="../css/h5/iot.css">
     <link rel="stylesheet" href="../css/h5/odds.css">
 
     <title>Title</title>
 </head>
 <body>
-<header id="header">
-    <div class="header_logo"></div>
-    <div class="header_menu"><i class="icon-0210"></i></div>
-    <div class="header_list">
-        <ul class="nav_list">
-            <li>首页</li>
-            <li>产品介绍</li>
-            <li>服务支持</li>
-            <li>商务合作</li>
-            <li>在线商城</li>
-            <li>品牌故事</li>
-            <li>加入我们</li>
-            <li>关于我们</li>
-            <li>联系我们</li>
-        </ul>
-    </div>
-</header>
+
+@@include("../../template/header_h5.html", {"title": "header"})
 
 
 <div id="contents">
@@ -137,28 +123,6 @@
     </div>
 </div>
 
-<footer id="footer">
+@!@include("../../template/footer_h5.html", {"title": "footer"})
 
-    <div class="footer">
-        <div class="footer_top">
-            <div>关于我们</div>
-            <div>产品下载</div>
-            <div>技术支持</div>
-            <div>商务合作</div>
-            <div>加入我们</div>
-        </div>
-        <div>
-            <p>联系电话：025-56566</p>
-            <p>商务合作：025-56566</p>
-        </div>
-    </div>
-</footer>
-
-
-</body>
-<script>
-    var oW=document.documentElement.clientWidth/7.5;
-
-    document.querySelector('html').style.fontSize=oW+'px';
-</script>
 </html>

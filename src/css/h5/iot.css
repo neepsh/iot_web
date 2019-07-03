@@ -30,12 +30,16 @@
 .header_logo {
     height: 0.56rem;
     width: 1.9rem;
-    background: url('assets/img/new_logo.png') no-repeat;
+    background: url('../../img/new_logo.png') no-repeat;
     background-size: 100%;
     margin-left: 0.3rem;;
 }
 
+body{
+    padding-top: 1.04rem;
+}
 #header {
+
     height: 1.04rem;
     background: #000;
     display: flex;
@@ -119,10 +123,6 @@
     border-bottom: 1px solid;
 }
 
-/*  h5 content*/
-#content {
-    margin-top: 1.0rem;
-}
 
 
 /*h5 footer*/
@@ -130,6 +130,9 @@
     display: flex;
     justify-content: space-around;
     font-size: 14px;
+    color: #fff;
+}
+.footer_top a{
     color: #fff;
 }
 

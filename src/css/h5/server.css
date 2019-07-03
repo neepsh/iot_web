@@ -1,0 +1,53 @@
+body{
+    background: #efefef;
+}
+
+#banner img{
+    width: 100%;
+}
+#banner{
+    margin-bottom: 0.3rem;
+}
+.nav{
+    text-align: center;
+}
+.nav_name{
+    font-size: 0.28rem;
+    display: inline-block;
+    padding: 0 0.41rem 0.15rem 0.41rem;
+    width: 1.48rem;
+    border-bottom: 0.02rem solid #8da3ae;
+    position: relative;
+}
+.nav_name:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.02rem;
+    width: 1.48rem;
+    height: 0.04rem;
+    background: #ff7500;
+    left: 0.41rem;
+    z-index: 1;
+}
+.nav_info{
+    font-size: 0.24rem;
+    margin-top: 0.16rem;
+    margin-bottom: 0.2rem;
+}
+.item{
+    background: #fff;
+    margin-bottom: 0.3rem;
+    padding: 0  0.3rem;
+    font-size: 0.24rem;
+}
+.item li{
+    padding: 0.06rem  0;
+    line-height: 0.35rem;
+}
+
+.server_name{
+    font-size: 0.3rem;
+    line-height: 0.8rem;
+    font-weight: bold;
+}
