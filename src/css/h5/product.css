@@ -4,7 +4,12 @@
 #product img{
     width: 100%;
 }
+#product{
+    display: flex;
+    flex-wrap: wrap;
+}
 .content{
+
     padding: 0.3rem;
     color: #666666;
     background: #fff;

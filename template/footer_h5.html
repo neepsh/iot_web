@@ -33,7 +33,7 @@
 
     document.getElementsByTagName('html')[0].style.fontSize=oW+'px';
 
-    var nav_status = false, ul_status = false, status = true;
+    var nav_status = false, ul_status = false, icon_status = true;
     var oMenu = document.querySelector('.header_menu'),
         oList = document.querySelector('.nav_list'),
         oIcon = document.querySelector('.icon-0252'),
@@ -41,7 +41,6 @@
 
 
     oMenu.onclick = function () {
-
         if (nav_status) {
             oList.style.right = '-60%';
             nav_status = false
@@ -51,22 +50,23 @@
         }
     };
 
-    oIcon.addEventListener('click', function (e) {
-        status = false;
+    oIcon.onclick= function () {
+        icon_status = false;
         if (ul_status) {
             oUl.style.height = "0";
             ul_status = false;
             this.style.transform = "rotate(0deg)";
         } else {
             ul_status = true;
-
             this.style.transform = "rotate(90deg)";
             oUl.style.height = "2.45rem";
         }
-    }, false);
+        return false;
+    }
 
     oList.onclick = function () {
-        if (status) {
+
+        if ( icon_status ) {
             oList.style.right = '-60%';
             nav_status = false
         }

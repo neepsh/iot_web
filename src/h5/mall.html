@@ -232,6 +232,8 @@
 
         var t1 = Date.now();
         var ifr = document.createElement("iframe");
+
+        console.log(t1)
         ifr.setAttribute('src', url);
         ifr.setAttribute('style', 'display:none');
         document.body.appendChild(ifr);

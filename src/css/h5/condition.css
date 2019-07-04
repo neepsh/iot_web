@@ -14,9 +14,31 @@
     display: inline-block;
     background: #ff7500;
 }
+.ctrl b:before{
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.1rem solid;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.ctrl b:after{
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.1rem solid;
+    border-color: #ff7500 transparent transparent transparent;
+    position: absolute;
+    bottom: -0.2rem;
+    z-index: 10;
+}
 .ctrl span{
     display: inline-block;
-    margin-left: 0.3rem;
+    margin-left: 0.45rem;
     font-size:0.24rem; ;
 }
 
@@ -24,6 +46,8 @@
     font-size: 0;
     position: relative;
     height: 1.2rem;
+    display: flex;
+    align-items: center;
 }
 .item{
     margin-top: 0.3rem;

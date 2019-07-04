@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,mini-scale-1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/icom.css">
+    <link rel="stylesheet" href="../css/h5/iot.css">
+    <style>
+        .nav{
+            text-align: center;
+            padding-top: 0.4rem;
+        }
+        .nav_name{
+            font-size: 0.28rem;
+            display: inline-block;
+            padding: 0 0.41rem 0.15rem 0.41rem;
+            width: 1.48rem;
+            border-bottom: 0.02rem solid #8da3ae;
+            position: relative;
+        }
+        .nav_info{
+            font-size: 0.28rem;
+        }
+        .nav_name:after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -0.02rem;
+            width: 1.48rem;
+            height: 0.04rem;
+            background: #ff7500;
+            left: 0.41rem;
+            z-index: 1;
+        }
+        #content img{
+            width: 100%;
+        }
+    </style>
+    <title>关于我们</title>
+</head>
+<body>
+
+@@include("../../template/header_h5.html",{"title":"header"})
+<div id="content">
+    <nav class="nav">
+        <div class="nav_name">服务与支持</div>
+        <div class="nav_info">Services Support</div>
+    </nav>
+
+    <img src="../img/active_03.jpg" alt="">
+
+</div>
+
+@@include("../../template/footer_h5.html", {"title": "footer"})
+</html>

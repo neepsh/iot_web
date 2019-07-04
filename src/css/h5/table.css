@@ -105,6 +105,9 @@
     background: #ff7500;
     border: none;
 }
+.table_content{
+    margin-top: 0.3rem;
+}
 .ul_content{
     flex-grow: 3;
     margin-left: 0.35rem;

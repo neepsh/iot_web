@@ -1,10 +1,10 @@
 /* banner */
 .banner img {
     width: 100%;
+    display: flex;
 }
 
 #banner {
-    padding-bottom: 0.28rem;
     background: #efefef;
 }
 
@@ -133,30 +133,22 @@
 #active {
     margin-top: 0.3rem;
     padding: 0.3rem;
-    background: #fff;;
 }
-
-.active {
-    display: flex;
-    justify-content: space-around;
+.odds{
     margin-top: 0.3rem;
-    font-size: 0.24rem;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
 }
-
-.active_img img {
-    width: 2.78rem;
+.odds>div{
+    width: 1.34rem;
+    background:#ff7500 ;
+    border-radius: 0.1rem;
 }
-
-.active > div:nth-of-type(2) {
-    flex-grow: 3;
-    padding-left: 0.3rem;
+.odds i{
+    font-size: 0.6rem;
 }
-
-.active_name {
-    padding-top: 0.2rem;
-    font-size: 0.3rem;
-}
-
-.active_info {
-    padding-top: 0.16rem;
+.odds p{
+    font-size: 0.22rem;
 }

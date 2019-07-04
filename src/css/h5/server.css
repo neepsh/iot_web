@@ -4,12 +4,11 @@ body{
 
 #banner img{
     width: 100%;
-}
-#banner{
-    margin-bottom: 0.3rem;
+    display: flex;
 }
 .nav{
     text-align: center;
+    padding-top: 0.4rem;
 }
 .nav_name{
     font-size: 0.28rem;
