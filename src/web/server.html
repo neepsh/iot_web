@@ -26,22 +26,8 @@
                 <p>服务与支持</p>
                 <span>Service and Support</span>
             </nav>
-            <div class="item">
-                <!--<div v-for="obj in item">
-                    <div class="item_img" :class="obj.img"></div>
-                    <div class="item_name">{{obj.name}}</div>
-                    <div class="item_info">{{obj.info}}</div>
-                </div>-->
-
-            </div>
-            <div class="list">
-                <!--<div v-for="obj in list">
-                    <div class="list_img" :class="obj.style"></div>
-                    <div class="list_content">
-                        <nav>{{obj.name}}</nav>
-                        <div>{{obj.info}}</div>
-                    </div-->>
-                </div>
+            <div class="item"></div>
+            <div class="list"></div>
             </div>
             <div class="notes">注：如需咨询更详细的服务内容，请来电咨询我们 <input type="tel" value="400-8288-251"></div>
 
@@ -127,7 +113,7 @@
         $('.item').append(`
 
             <div>
-                    <div class="item_img" class=${obj.img}></div>
+                    <div class="item_img ${obj.img}"></div>
                     <div class="item_name"> ${obj.name}</div>
                     <div class="item_info">${obj.info}</div>
                 </div>
@@ -137,7 +123,7 @@
     $.each(list,function (i,obj) {
         $('.list').append(`
             <div >
-                    <div class="list_img" :class=${obj.style}></div>
+                    <div class="list_img ${obj.style}"></div>
                     <div class="list_content">
                         <nav>${obj.name}</nav>
                         <div>${obj.info}</div>
