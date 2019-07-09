@@ -52,8 +52,9 @@
 .company_info p{
     text-indent: 2em;
     font-size: 16px;
-    line-height: 48px;
+    line-height: 44px;
     color: #656565;
+    padding-bottom: 15px;
 }
 .item{
     width: 287px;

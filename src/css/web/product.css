@@ -28,7 +28,7 @@
 }
 .system{
     height: 480px;
-    background: url("../../assets/img/product_bg_07.jpg");
+    background: url("../../img/product_bg_07.jpg");
     background-size: cover;
     position: relative;
 }
@@ -36,12 +36,12 @@
     margin-bottom: 30px;
     position: relative;
     height: 532px;
-    background: url("../../assets/img/product_bg_09.jpg");
+    background: url("../../img/product_bg_09.jpg");
     background-size: cover;
 }
 .img{
     height: 508px;
-    background: url("../../assets/img/product_bg_03.jpg");
+    background: url("../../img/product_bg_03.jpg");
     background-size: cover;
 }
 .infos{
@@ -112,4 +112,8 @@
 .banner img{
     width: 100%;
     margin-top: -25px;
+}
+#product img{
+    width: 100%;
+    cursor: pointer;
 }

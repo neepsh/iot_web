@@ -1,0 +1,122 @@
+.banner img{
+    width:100%;
+}
+.content{
+    margin: 0 0.3rem;
+    font-size: 0.24rem;
+}
+.nav{
+    border-left: 0.03rem solid #ff7500;
+    color: #ff7500;
+    font-size: 0.28rem;
+    padding-left: 0.15rem;
+    margin: 0.3rem 0;
+}
+.join{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.aims{
+
+}
+.aims>div{
+    width: 3.35rem;
+    height: 2.86rem;
+    background-color: #ffebd9;
+    box-shadow: 0px 2px 8px 0px
+    rgba(0, 0, 0, 0.16);
+    margin-top: 0.5rem;
+    color:#ff8319 ;
+    font-size: 0.24rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.aims_name{
+    position: relative;
+    top: -0.23rem;
+    height: 0.5rem;
+    width: 1.42rem;
+    background: #ff7500;
+    color: #fff;
+    margin: 0 auto;
+}
+.aims p{
+    line-height: 0.5rem;
+}
+.play>div{
+    display: flex;
+    margin-top: 0.3rem;
+}
+.play>div:nth-of-type(2){
+    flex-direction: row-reverse;
+    text-indent: 2em;
+}
+.play>div:nth-of-type(2) p{
+    text-indent: 2em;
+    padding-bottom: 0;
+}
+.play p{
+    line-height: 0.36rem;
+    padding-bottom: 0.2rem;
+}
+.play_info{
+    flex-grow: 3;
+    margin-left: 0.12rem;
+    border-bottom: 0.02rem  solid #ff7500;
+    line-height: 0.36rem;
+}
+.play_two{
+    margin: 0;
+}
+.play>div img{
+    width: 2.34rem;
+}
+.play>div:nth-of-type(2) img{
+    width: 2.62rem;
+}
+.rule{
+    display: flex;
+    justify-content: space-around;
+}
+.rule>div{
+    width: 1.42rem;
+    text-align: center;
+}
+.rule p{
+   margin-top: 0.2rem;
+}
+.rule i{
+    font-size: 0.62rem;
+    color: #ff7500;
+    margin-bottom: 0.3rem;
+}
+.developing .join_img{
+    background: url("../../img/market1_1.png") no-repeat;
+    background-size: cover;
+}
+.developing>div:nth-of-type(2) .join_img{
+    background: url("../../img/market2_1.png") no-repeat;
+    background-size: cover;
+}
+.developing>div:nth-of-type(3) .join_img{
+    background: url("../../img/market3_1.png") no-repeat;
+    background-size: cover;
+}
+.developing>div:nth-of-type(4) .join_img{
+    background: url("../../img/market4_1.png") no-repeat;
+    background-size: cover;
+}
+.developing p{
+    line-height: 0.4rem;
+    color: #ff7500;
+    text-align: center;
+}
+.join_img{
+    width: 3.42rem;
+    height: 2.39rem;
+}
+.developing>div{
+    width: 3.42rem;
+    margin-bottom: 0.2rem;
+}

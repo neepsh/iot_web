@@ -9,7 +9,8 @@
     <style>
         .nav{
             text-align: center;
-            padding-top: 0.4rem;
+            margin-top: -0.5rem;
+            padding-bottom: 0.3rem;
         }
         .nav_name{
             font-size: 0.28rem;
@@ -36,6 +37,29 @@
         #content img{
             width: 100%;
         }
+        .product{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product>div{
+            width: 3.29rem;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 0.2rem;
+        }
+        .product img{
+            width: 3.29rem;
+            height: 3.2rem;
+        }
+        .product p{
+            width: 3.29rem;
+            line-height: 0.6rem;
+            color: #ff9900;
+            background: #ffe8d4;
+            text-align: center;
+            font-size: 0.24rem;
+        }
     </style>
     <title>关于我们</title>
 </head>
@@ -43,12 +67,33 @@
 
 @@include("../../template/header_h5.html",{"title":"header"})
 <div id="content">
+    
+    <div class="banner">
+        <img src="../img/active_banner_02.png" alt="活动">
+    </div>
     <nav class="nav">
         <div class="nav_name">服务与支持</div>
         <div class="nav_info">Services Support</div>
     </nav>
 
-    <img src="../img/active_03.jpg" alt="">
+    <div class="product">
+        <div>
+            <img src="../img/active_h5_03.png" alt="">
+            <p>音乐节活动</p>
+        </div>
+        <div>
+            <img src="../img/active_h5_05.png" alt="">
+            <p>音乐节活动</p>
+        </div>
+        <div>
+            <img src="../img/active_h5_09.png" alt="">
+            <p>音乐节活动</p>
+        </div>
+        <div>
+            <img src="../img/active_h5_10.png" alt="">
+            <p>音乐节活动</p>
+        </div>
+    </div>
 
 </div>
 

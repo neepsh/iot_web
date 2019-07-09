@@ -3,10 +3,7 @@
     <div class="footer">
         <div class="footer_top">
             <div>
-                <a href="index.ntml">网站首页</a>
-            </div>
-            <div>
-                <a href="product.ntml">网站首页</a>
+                <a href="index.html">网站首页</a>
             </div>
             <div>
                 <a href="odds.html">我们的优势</a>
@@ -86,7 +83,19 @@
             } else {
                 $('#sidebar').hide();
             }
+        };
+        var history=sessionStorage.getItem("xbz_iot");
+
+        if(history){
+            $('.nav_list>li').eq(history).addClass('nav_active')
+        }else {
+            sessionStorage.setItem("xbz_iot",0)
         }
+        $('.nav_list>li').click(function () {
+
+            sessionStorage.setItem("xbz_iot",$(this).index());
+        })
+
     }
 </script>
 
