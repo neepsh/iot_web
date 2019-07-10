@@ -20,11 +20,10 @@
             <div class="btn_banner btn_left" ><i   class="icon-0243"></i></div>
             <div class="btn_banner btn_right" ><i class="icon-0244" ></i></div>
             <div class="banner_ref" >
-                <img src="../img/banner.png" alt="#">
-                <img src="../img/index_banner.jpg" alt="#">
-                <img src="../img/index_banner1.jpg" alt="#">
-                <img src="../img/index_banner2.jpg" alt="#">
-
+                <a href="#"><img src="../img/banner6.jpg" alt="#"></a>
+                <a href="#"><img src="../img/banner1.jpg" alt="#"></a>
+                <a href="web/product.html"><img src="../img/banner3.jpg" alt="#"></a>
+                <a href="web/table.html"><img src="../img/banner2.jpg" alt="#"></a>
             </div>
             <div class="banner_line">
                 <div class="line_active"></div>
@@ -168,8 +167,6 @@
 
 <script src="js/doMove.js"></script>
 <script type="text/javascript">
-
-
         //banner
 
         let oBox=document.querySelector('.banner_ref');
@@ -191,9 +188,7 @@
 
 
         oLeft.onclick=function(){
-
             if(num<=0){
-
                 num=aImg.length/2;
                 oBox.style.left= -num*oW + 'px';
             }
@@ -212,6 +207,7 @@
             show_line(num)
         };
         oBox.onmouseover=function(){
+            console.log("sss")
             clearInterval(timer);
         };
         oBox.onmouseout=function(){
@@ -246,7 +242,6 @@
                 show_line(num)
             }
         }
-
 
 
 </script>
