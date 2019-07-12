@@ -97,6 +97,27 @@
         })
 
     }
+
+    function isphone() {
+        var mobileArry = ["iPhone", "iPad", "Android", "Windows Phone", "BB10; Touch", "BB10; Touch", "PlayBook", "Nokia"];
+        var ua = navigator.userAgent;
+
+        var res=[];
+        $.each(mobileArry,function (i ,arr) {
+            if(ua.indexOf(arr) > 0){
+                res.push(arr)
+            }
+        })
+        var path=window.location.pathname;
+
+        /*return res.length > 0;*/
+        if (res.length > 0) {
+            if (path.indexOf('h5') == -1) {
+                window.location.pathname = '/h5/index.html'
+            }
+        }
+    }
+    isphone()
 </script>
 
 <script>

@@ -26,6 +26,7 @@
     </div>
 </footer>
 </body>
+<script src="../js/zepto.min.js"></script>
 <script>
 
 
@@ -72,6 +73,27 @@
         }
         status = true;
     };
+
+    function isphone() {
+        var mobileArry = ["iPhone", "iPad", "Android", "Windows Phone", "BB10; Touch", "BB10; Touch", "PlayBook", "Nokia"];
+        var ua = navigator.userAgent;
+
+        var res=[];
+        $.each(mobileArry,function (i ,arr) {
+            if(ua.indexOf(arr) > 0){
+                res.push(arr)
+            }
+        })
+        var path=window.location.pathname;
+        /*return res.length > 0;*/
+        if (res.length ==0) {//如果是web
+
+            if (path.indexOf('web') == -1) {//页面路径不是web
+                window.location.pathname = '/index.html';
+            }
+        }
+    }
+    isphone()
 
 </script>
 <script>
