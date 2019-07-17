@@ -89,7 +89,8 @@
         if (res.length ==0) {//如果是web
 
             if (path.indexOf('web') == -1) {//页面路径不是web
-                window.location.pathname = '/index.html';
+                window.location.pathname = '/' +
+                    'dist/index.html';
             }
         }
     }
